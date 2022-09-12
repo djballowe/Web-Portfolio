@@ -130,8 +130,9 @@ body {
 
 .App {
   margin: auto;
-  width: 50%;
-  margin-top: 100px
+  width: 60%;
+  margin-top: 100px;
 }
 
 @import "./components/header/header";
+@import "./components/intro/intro";

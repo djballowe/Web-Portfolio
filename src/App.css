@@ -134,7 +134,7 @@ body {
 
 .App {
   margin: auto;
-  width: 50%;
+  width: 60%;
   margin-top: 100px;
 }
 
@@ -156,4 +156,53 @@ body {
   text-decoration: none;
   list-style: none;
   padding: 0 20px;
+}
+
+.intro-container {
+  height: calc(100vh - 142.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.name p {
+  font-size: 5rem;
+}
+
+.title p {
+  font-size: 5rem;
+  opacity: 0.5;
+}
+
+.icons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.icons svg {
+  padding: 0 10px;
+}
+.icons svg:first-of-type {
+  padding-left: 0px;
+}
+
+.intro-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.intro-buttons button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.514);
+  font-size: 2rem;
+  margin: 0 10px;
+  height: 100px;
+  bottom: 1%;
+}
+.intro-buttons button:first-of-type {
+  margin-left: 0px;
 }/*# sourceMappingURL=App.css.map */
