@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0 20px;
+  }
+}

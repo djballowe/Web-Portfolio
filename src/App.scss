@@ -88,7 +88,6 @@ video {
   padding: 0;
   border: 0;
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -108,12 +107,10 @@ ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -121,7 +118,6 @@ q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -135,25 +131,7 @@ body {
 .App {
   margin: auto;
   width: 50%;
-  margin-top: 100px;
+  margin-top: 100px
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-family: "Playfair Display", serif;
-}
-
-.nav-bar {
-  display: flex;
-  align-items: center;
-}
-.nav-bar li {
-  text-decoration: none;
-  list-style: none;
-  padding: 0 20px;
-}/*# sourceMappingURL=App.css.map */
+@import "./components/header/header";
