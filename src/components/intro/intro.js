@@ -12,10 +12,14 @@ export default function Intro() {
   return (
     <div className="intro-container">
       <div className="name">
-        <p>David Ballowe</p>
+        <p>David Ballowe.</p>
       </div>
       <div className="title">
-        <p>Full-Stack Engineer</p>
+        <p>Full-Stack Engineer.</p>
+      </div>
+      <div className="intro-paragraph">
+        <p>Building and designing exceptional web experiences.</p>
+
       </div>
       <div className="icons">
         <GitHub path={mdiGithub} size={1.5} />
@@ -24,7 +28,7 @@ export default function Intro() {
       </div>
       <div className="intro-buttons">
         <button>
-           <Arrow path={mdiChevronDown} size={3} />{" "}
+          <Arrow path={mdiChevronDown} size={3} />{" "}
         </button>
       </div>
     </div>
