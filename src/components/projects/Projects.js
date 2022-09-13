@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Projects() {
+export default function Projects(props) {
   return (
-    <div className="projects-container">
+    <div className="projects-container" ref={props.page}>
       <div>
         <p className="projects-title">Projects.</p>
       </div>

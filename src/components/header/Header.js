@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <div className="header">
       <div className="logo">
@@ -8,9 +8,27 @@ export default function Header() {
       </div>
       <div>
         <ul className="nav-bar">
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li
+            onClick={() => {
+              props.handle("projects");
+            }}
+          >
+            Projects
+          </li>
+          <li
+            onClick={() => {
+              props.handle("about");
+            }}
+          >
+            About
+          </li>
+          <li
+            onClick={() => {
+              props.handle("contact");
+            }}
+          >
+            Contact
+          </li>
           <li>Resume</li>
         </ul>
       </div>

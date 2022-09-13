@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Contact() {
+export default function Contact(props) {
   return (
-    <div className="contact-container">
+    <div className="contact-container" ref={props.page}>
       <div className="contact-title">
         <p>Contact.</p>
       </div>
@@ -13,7 +13,13 @@ export default function Contact() {
             Whether you have a question or a project to work on. Send me an
             Email and I'll get back to you as soon as possible.
           </p>
-          <button>Contact</button>
+          <button
+            onClick={() => {
+              window.location.href = "mailto:db@davidballowe.com";
+            }}
+          >
+            Contact
+          </button>
         </div>
       </div>
     </div>

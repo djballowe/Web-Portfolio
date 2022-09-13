@@ -158,6 +158,7 @@ body {
   text-decoration: none;
   list-style: none;
   padding: 0 20px;
+  cursor: pointer;
 }
 
 .intro-container {
@@ -324,6 +325,9 @@ body {
 .about-icons {
   margin-top: 20px;
 }
+.about-icons a {
+  color: white;
+}
 .about-icons svg {
   padding: 0 10px;
 }
@@ -391,6 +395,7 @@ body {
   width: 150px;
   border-radius: 5px;
   margin-top: 70px;
+  cursor: pointer;
 }
 
 .icons-sticky {
