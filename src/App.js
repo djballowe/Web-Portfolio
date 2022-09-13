@@ -4,6 +4,7 @@ import Intro from "./components/intro/intro";
 import Projects from "./components/projects/Projects";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import Icons from "./components/sticky/Icons";
 
 function App() {
   return (

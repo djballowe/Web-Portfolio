@@ -29,8 +29,12 @@
   margin-top: 30px;
   display: flex;
   align-items: center;
+  a {
+    color: white;
+  }
   svg {
-    padding: 0 10px;
+    padding-right: 10px;
+    cursor: pointer;
     &:first-of-type {
       padding-left: 0px;
     }

@@ -137,6 +137,7 @@ body {
   width: 70%;
   margin-top: 50px;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .header {
@@ -187,8 +188,12 @@ body {
   display: flex;
   align-items: center;
 }
+.icons a {
+  color: white;
+}
 .icons svg {
-  padding: 0 10px;
+  padding-right: 10px;
+  cursor: pointer;
 }
 .icons svg:first-of-type {
   padding-left: 0px;
@@ -382,4 +387,15 @@ body {
   width: 150px;
   border-radius: 5px;
   margin-top: 70px;
+}
+
+.icons-sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.line {
+  height: 100px;
+  width: 2px;
+  background-color: white;
 }/*# sourceMappingURL=App.css.map */
