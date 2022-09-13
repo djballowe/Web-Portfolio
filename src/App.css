@@ -285,6 +285,10 @@ body {
   width: 150px;
   margin: 0 10px;
 }
+.project-buttons button a {
+  color: white;
+  text-decoration: none;
+}
 
 .description {
   width: 40%;

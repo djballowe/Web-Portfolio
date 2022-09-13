@@ -23,8 +23,24 @@ export default function Projects() {
                 Hosting.
               </p>
               <div className="project-buttons">
-                <button>Live Site</button>
-                <button>Code</button>
+                <button>
+                  <a
+                    href="https://zawnshop.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Site
+                  </a>
+                </button>
+                <button>
+                  <a
+                    href="https://github.com/djballowe/ZAWN"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>
+                </button>
               </div>
             </div>
             <img src={require("../../images/zawnscreen.png")} alt="" />
@@ -48,8 +64,25 @@ export default function Projects() {
                 in a hub world to record meetings and events that take place.
               </p>
               <div className="project-buttons">
-                <button>Live Site</button>
-                <button>Code</button>
+                <button>
+                  <a
+                    href="https://hubs.mozilla.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Site
+                  </a>
+                </button>
+                <button>
+                  {" "}
+                  <a
+                    href="https://github.com/djballowe/hubs"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>
+                </button>
               </div>
             </div>
           </div>
@@ -73,8 +106,26 @@ export default function Projects() {
                 deployment.
               </p>
               <div className="project-buttons">
-                <button>Live Site</button>
-                <button>Code</button>
+                <button>
+                  {" "}
+                  <a
+                    href="https://www.davidballowe.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Site
+                  </a>{" "}
+                </button>
+                <button>
+                  {" "}
+                  <a
+                    href="https://github.com/djballowe/Arch-Portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>{" "}
+                </button>
               </div>
             </div>
             <img src={require("../../images/davidballowe.png")} alt="" />
