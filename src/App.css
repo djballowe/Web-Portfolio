@@ -135,7 +135,7 @@ body {
 .App {
   margin: auto;
   width: 80%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .header {
@@ -159,7 +159,7 @@ body {
 }
 
 .intro-container {
-  height: calc(100vh - 142.5px);
+  height: calc(100vh - 92.5px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,12 +213,20 @@ body {
   margin-left: 0px;
 }
 
+.projects-container {
+  margin-top: 200px;
+}
+
 .projects-title {
   font-size: 5rem;
 }
 
-.projects-list {
-  margin-top: 100px;
+.projects-list-container {
+  margin-top: 150px;
+}
+
+.project-list {
+  margin: 50px 0;
 }
 
 .projects-list-title p {
@@ -256,6 +264,7 @@ body {
   border-radius: 20px;
   background-color: rgb(62, 62, 62);
   padding: 20px;
+  font-size: 1.2rem;
 }
 
 .project-buttons {
@@ -274,4 +283,16 @@ body {
 .description {
   width: 40%;
   margin-top: 20px;
+}
+
+.about-container {
+  margin-top: 200px;
+}
+
+.about-title {
+  font-size: 5rem;
+}
+
+.about-icons {
+  margin-top: 150px;
 }/*# sourceMappingURL=App.css.map */
