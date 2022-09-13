@@ -134,8 +134,9 @@ body {
 
 .App {
   margin: auto;
-  width: 50%;
-  margin-top: 100px;
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -156,4 +157,229 @@ body {
   text-decoration: none;
   list-style: none;
   padding: 0 20px;
+}
+
+.intro-container {
+  height: calc(100vh - 92.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.name p {
+  font-size: 5rem;
+}
+
+.intro-paragraph {
+  margin-top: 10px;
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+.title p {
+  font-size: 5rem;
+  opacity: 0.5;
+}
+
+.icons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.icons svg {
+  padding: 0 10px;
+}
+.icons svg:first-of-type {
+  padding-left: 0px;
+}
+
+.intro-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.intro-buttons button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.514);
+  font-size: 2rem;
+  margin: 0 10px;
+  height: 100px;
+  bottom: 1%;
+}
+.intro-buttons button:first-of-type {
+  margin-left: 0px;
+}
+
+.projects-container {
+  margin-top: 200px;
+}
+
+.projects-title {
+  font-size: 5rem;
+}
+
+.projects-list-container {
+  margin-top: 150px;
+}
+
+.project-list {
+  margin: 50px 0;
+}
+
+.projects-list-title p {
+  font-size: 2rem;
+}
+.projects-list-title p:last-of-type {
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+.projects-list-title-even {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.projects-list-title-even p {
+  font-size: 2rem;
+}
+.projects-list-title-even p:last-of-type {
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.description-container img {
+  width: 50%;
+  border-radius: 10px;
+  filter: drop-shadow(30px 20px #575757);
+}
+.description-container p {
+  border-radius: 20px;
+  background-color: rgb(62, 62, 62);
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.project-buttons {
+  margin-top: 20px;
+}
+.project-buttons button {
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  color: white;
+  height: 50px;
+  width: 150px;
+  margin: 0 10px;
+}
+
+.description {
+  width: 40%;
+  margin-top: 20px;
+}
+
+.about-container {
+  margin-top: 200px;
+}
+
+.about-title {
+  font-size: 5rem;
+}
+
+.about-description-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-description {
+  width: 40%;
+  font-size: 1.3rem;
+  background-color: rgb(62, 62, 62);
+  padding: 20px;
+  border-radius: 20px;
+}
+.about-description p {
+  line-height: 200%;
+}
+
+.about-icons {
+  margin-top: 20px;
+}
+.about-icons svg {
+  padding: 0 10px;
+}
+.about-icons svg:first-of-type {
+  padding-left: 0px;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 10px;
+  width: 150px;
+}
+.image-border p {
+  margin-top: 10px;
+  font-weight: 600;
+}
+.image-border img {
+  width: auto;
+  height: 80px;
+}
+
+.contact-container {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  font-size: 5rem;
+  margin-bottom: 50px;
+}
+
+.contact-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-description {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-description p {
+  text-align: center;
+  line-height: 150%;
+  font-size: 1.3rem;
+}
+.contact-description button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 70px;
 }/*# sourceMappingURL=App.css.map */

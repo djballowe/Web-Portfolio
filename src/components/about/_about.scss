@@ -1,0 +1,58 @@
+.about-container {
+  margin-top: 200px;
+}
+
+.about-title {
+  font-size: 5rem;
+}
+
+.about-description-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-description {
+  width: 40%;
+  font-size: 1.3rem;
+  background-color: rgb(62, 62, 62);
+  padding: 20px;
+  border-radius: 20px;
+  p {
+    line-height: 200%;
+  }
+}
+
+.about-icons {
+  margin-top: 20px;
+  svg {
+    padding: 0 10px;
+    &:first-of-type {
+      padding-left: 0px;
+    }
+  }
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 10px;
+  width: 150px;
+  p {
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  img {
+    width: auto;
+    height: 80px;
+  }
+}

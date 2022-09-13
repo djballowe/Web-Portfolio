@@ -130,8 +130,15 @@ body {
 
 .App {
   margin: auto;
-  width: 50%;
-  margin-top: 100px
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 @import "./components/header/header";
+@import "./components/intro/intro";
+@import "./components/projects/projects";
+@import "./components/about/about";
+@import "./components/contact/contact";
+@import "./components/sticky/email";
+@import "./components/sticky/icons";
