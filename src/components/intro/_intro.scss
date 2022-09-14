@@ -7,21 +7,36 @@
 }
 
 .name {
+  overflow: hidden;
+  height: 100px;
+  overflow: hidden;
   p {
     font-size: 5rem;
+    animation: slideIn 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-fill-mode: forwards;
   }
 }
 
 .intro-paragraph {
+  height: 30px;
+  overflow: hidden;
   margin-top: 10px;
   opacity: 0.5;
   font-size: 1.5rem;
+  p {
+    animation: slideIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-fill-mode: forwards;
+  }
 }
 
 .title {
+  height: 100px;
+  overflow: hidden;
   p {
     font-size: 5rem;
     opacity: 0.5;
+    animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-fill-mode: forwards;
   }
 }
 
@@ -29,8 +44,12 @@
   margin-top: 30px;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  height: 40px;
   a {
     color: white;
+    animation: slideIn .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-fill-mode: forwards;
   }
   svg {
     padding-right: 10px;

@@ -169,28 +169,59 @@ body {
   position: relative;
 }
 
+.name {
+  overflow: hidden;
+  height: 100px;
+  overflow: hidden;
+}
 .name p {
   font-size: 5rem;
+  -webkit-animation: slideIn 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          animation: slideIn 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .intro-paragraph {
+  height: 30px;
+  overflow: hidden;
   margin-top: 10px;
   opacity: 0.5;
   font-size: 1.5rem;
 }
+.intro-paragraph p {
+  -webkit-animation: slideIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          animation: slideIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 
+.title {
+  height: 100px;
+  overflow: hidden;
+}
 .title p {
   font-size: 5rem;
   opacity: 0.5;
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .icons {
   margin-top: 30px;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  height: 40px;
 }
 .icons a {
   color: white;
+  -webkit-animation: slideIn 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          animation: slideIn 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .icons svg {
   padding-right: 10px;
@@ -308,14 +339,13 @@ body {
   text-align: center;
   margin-right: 40px;
   z-index: 15;
-  width: 32%;
 }
 
 .links-container-code {
   position: relative;
   text-align: center;
   margin-right: 40px;
-  width: 20%;
+  z-index: 15;
 }
 
 .description {
@@ -389,6 +419,8 @@ body {
   margin-top: 200px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 250px;
+  position: relative;
 }
 
 .contact-title {
@@ -400,10 +432,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  width: 70%;
 }
 
 .contact-description {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,7 +445,7 @@ body {
 .contact-description p {
   text-align: center;
   line-height: 150%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .contact-description button {
   background-color: transparent;
@@ -425,6 +459,25 @@ body {
   cursor: pointer;
 }
 
+.contact-icons {
+  margin-top: 20px;
+}
+.contact-icons svg {
+  padding: 0 10px;
+}
+.contact-icons a {
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 1%;
+  color: rgb(124, 124, 124);
+}
+
 .icons-sticky {
   position: fixed;
   z-index: 10;
@@ -434,4 +487,22 @@ body {
   height: 100px;
   width: 2px;
   background-color: white;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=App.css.map */
