@@ -275,6 +275,17 @@ body {
 
 .projects-title {
   font-size: 5rem;
+  height: 100px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.inter-animations {
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  visibility: visible;
 }
 
 .projects-list-container {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function Projects(props) {
   const [isZawnLive, setIsZawnLive] = useState(false);
@@ -8,14 +9,20 @@ export default function Projects(props) {
   const [isArchLive, setIsArchLive] = useState(false);
   const [isArchCode, setIsArchCode] = useState(false);
 
-  const handleHovering = (e) => {
-    const id = e.target.id;
-  };
+  const { ref: projectRef, inView: projectVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
     <div className="projects-container" ref={props.page}>
-      <div>
-        <p className="projects-title">Projects.</p>
+      <div className="projects-title">
+        <p
+          className={projectVisible ? "inter-animations" : ""}
+          ref={projectRef}
+        >
+          Projects.
+        </p>
       </div>
       <div className="projects-list-container">
         <div className="projects-list">
