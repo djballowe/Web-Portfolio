@@ -276,19 +276,46 @@ body {
 
 .project-buttons {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
-.project-buttons button {
-  background-color: transparent;
-  border: 1px solid white;
-  font-size: 1.5rem;
-  color: white;
-  height: 50px;
-  width: 150px;
-  margin: 0 10px;
-}
-.project-buttons button a {
-  color: white;
+.project-buttons a {
+  position: relative;
   text-decoration: none;
+  z-index: 100;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+.project-buttons a:first-of-type {
+  padding-left: 0px;
+}
+.project-buttons a:hover {
+  color: black;
+}
+
+.underline {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 1%;
+  transition: all 0.2s ease-in-out;
+}
+
+.links-container {
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  z-index: 15;
+  width: 32%;
+}
+
+.links-container-code {
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  width: 20%;
 }
 
 .description {
