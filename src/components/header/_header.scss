@@ -6,15 +6,27 @@
 
 .logo {
   font-family: "Playfair Display", serif;
+  overflow: hidden;
+  height: 45px;
+  h1 {
+    animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
+  }
 }
 
 .nav-bar {
   display: flex;
   align-items: center;
+  height: 20px;
+  overflow: hidden;
   li {
+    animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
     text-decoration: none;
     list-style: none;
     padding: 0 20px;
     cursor: pointer;
   }
 }
+
+

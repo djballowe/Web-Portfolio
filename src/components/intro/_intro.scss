@@ -12,7 +12,7 @@
   overflow: hidden;
   p {
     font-size: 5rem;
-    animation: slideIn 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: slideIn 1.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
   }
 }
@@ -24,7 +24,7 @@
   opacity: 0.5;
   font-size: 1.5rem;
   p {
-    animation: slideIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
   }
 }
@@ -35,7 +35,7 @@
   p {
     font-size: 5rem;
     opacity: 0.5;
-    animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
   }
 }
@@ -48,7 +48,7 @@
   height: 40px;
   a {
     color: white;
-    animation: slideIn .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
   }
   svg {
@@ -74,6 +74,8 @@
     margin: 0 10px;
     height: 100px;
     bottom: 1%;
+    animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
     &:first-of-type {
       margin-left: 0px;
     }

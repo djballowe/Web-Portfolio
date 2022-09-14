@@ -148,13 +148,27 @@ body {
 
 .logo {
   font-family: "Playfair Display", serif;
+  overflow: hidden;
+  height: 45px;
+}
+.logo h1 {
+  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .nav-bar {
   display: flex;
   align-items: center;
+  height: 20px;
+  overflow: hidden;
 }
 .nav-bar li {
+  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   text-decoration: none;
   list-style: none;
   padding: 0 20px;
@@ -176,8 +190,8 @@ body {
 }
 .name p {
   font-size: 5rem;
-  -webkit-animation: slideIn 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-          animation: slideIn 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation: slideIn 1.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -190,8 +204,8 @@ body {
   font-size: 1.5rem;
 }
 .intro-paragraph p {
-  -webkit-animation: slideIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-          animation: slideIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -203,8 +217,8 @@ body {
 .title p {
   font-size: 5rem;
   opacity: 0.5;
-  -webkit-animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-          animation: slideIn 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -218,8 +232,8 @@ body {
 }
 .icons a {
   color: white;
-  -webkit-animation: slideIn 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-          animation: slideIn 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -246,6 +260,10 @@ body {
   margin: 0 10px;
   height: 100px;
   bottom: 1%;
+  -webkit-animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .intro-buttons button:first-of-type {
   margin-left: 0px;
@@ -504,5 +522,41 @@ body {
   }
   to {
     transform: translateY(0px);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }/*# sourceMappingURL=App.css.map */

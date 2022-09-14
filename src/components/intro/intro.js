@@ -40,7 +40,7 @@ export default function Intro() {
         </a>
       </div>
       <div className="intro-buttons">
-        <button>
+        <button className="intro-buttons">
           <Arrow path={mdiChevronDown} size={3} />{" "}
         </button>
       </div>
