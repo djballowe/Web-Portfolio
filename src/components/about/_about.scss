@@ -26,6 +26,9 @@
 
 .about-icons {
   margin-top: 20px;
+  a {
+    color: white;
+  }
   svg {
     padding: 0 10px;
     &:first-of-type {

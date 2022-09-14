@@ -4,6 +4,15 @@
 
 .projects-title {
   font-size: 5rem;
+  height: 100px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.inter-animations {
+  animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  animation-fill-mode: forwards;
+  visibility: visible;
 }
 
 .projects-list-container {
@@ -56,15 +65,45 @@
 
 .project-buttons {
   margin-top: 20px;
-  button {
-    background-color: transparent;
-    border: 1px solid white;
-    font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  a {
+    position: relative;
+    text-decoration: none;
+    z-index: 100;
     color: white;
-    height: 50px;
-    width: 150px;
-    margin: 0 10px;
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;
+    &:first-of-type {
+      padding-left: 0px;
+    }
+    &:hover {
+      color: black;
+    }
   }
+}
+
+.underline {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 1%;
+  transition: all 0.2s ease-in-out;
+}
+
+.links-container {
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  z-index: 15;
+}
+
+.links-container-code {
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  z-index: 15;
 }
 
 .description {

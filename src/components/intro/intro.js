@@ -19,15 +19,28 @@ export default function Intro() {
       </div>
       <div className="intro-paragraph">
         <p>Building and designing exceptional web experiences.</p>
-
       </div>
       <div className="icons">
-        <GitHub path={mdiGithub} size={1.5} />
-        <Linkedin path={mdiLinkedin} size={1.5} />
-        <Resume path={mdiFileOutline} size={1.5} />
+        <a href="https://github.com/djballowe" target="_blank" rel="noreferrer">
+          <GitHub path={mdiGithub} size={1.5} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/david-ballowe-90a164178/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Linkedin path={mdiLinkedin} size={1.5} />
+        </a>
+        <a
+          href="./Docs/David Ballowe Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Resume path={mdiFileOutline} size={1.5} />
+        </a>
       </div>
       <div className="intro-buttons">
-        <button>
+        <button className="intro-buttons">
           <Arrow path={mdiChevronDown} size={3} />{" "}
         </button>
       </div>

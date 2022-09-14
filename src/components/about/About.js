@@ -6,10 +6,10 @@ import { mdiLinkedin } from "@mdi/js";
 import Resume from "@mdi/react";
 import { mdiFileOutline } from "@mdi/js";
 
-export default function About() {
+export default function About(props) {
   return (
     <div className="about-container">
-      <div className="about-title">
+      <div className="about-title" ref={props.page}>
         <p>About.</p>
       </div>
       <div className="about-description-container">
@@ -24,9 +24,27 @@ export default function About() {
             working with lately.
           </p>
           <div className="about-icons">
-            <GitHub path={mdiGithub} size={1.5} />
-            <Linkedin path={mdiLinkedin} size={1.5} />
-            <Resume path={mdiFileOutline} size={1.5} />
+            <a
+              href="https://github.com/djballowe"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHub path={mdiGithub} size={1.5} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/david-ballowe-90a164178/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin path={mdiLinkedin} size={1.5} />
+            </a>
+            <a
+              href="./Docs/David Ballowe Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Resume path={mdiFileOutline} size={1.5} />
+            </a>
           </div>
         </div>
         <div className="image-container">

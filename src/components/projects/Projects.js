@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
-export default function Projects() {
+export default function Projects(props) {
+  const [isZawnLive, setIsZawnLive] = useState(false);
+  const [isZawnCode, setIsZawnCode] = useState(false);
+  const [isHubsLive, setIsHubsLive] = useState(false);
+  const [isHubsCode, setIsHubsCode] = useState(false);
+  const [isArchLive, setIsArchLive] = useState(false);
+  const [isArchCode, setIsArchCode] = useState(false);
+
+  const { ref: projectRef, inView: projectVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <div className="projects-container">
-      <div>
-        <p className="projects-title">Projects.</p>
+    <div className="projects-container" ref={props.page}>
+      <div className="projects-title">
+        <p
+          className={projectVisible ? "inter-animations" : ""}
+          ref={projectRef}
+        >
+          Projects.
+        </p>
       </div>
       <div className="projects-list-container">
         <div className="projects-list">
@@ -23,8 +41,49 @@ export default function Projects() {
                 Hosting.
               </p>
               <div className="project-buttons">
-                <button>Live Site</button>
-                <button>Code</button>
+                <div className="links-container">
+                  <a
+                    onMouseEnter={() => {
+                      setIsZawnLive(true);
+                    }}
+                    onMouseOut={() => {
+                      setIsZawnLive(false);
+                    }}
+                    href="https://zawnshop.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    id="zawn-live"
+                  >
+                    Live Site
+                  </a>
+                  <div
+                    className="underline"
+                    style={{
+                      minHeight: isZawnLive ? "37px" : "2px",
+                    }}
+                  ></div>
+                </div>
+                <div className="links-container-code">
+                  <a
+                    onMouseEnter={() => {
+                      setIsZawnCode(true);
+                    }}
+                    onMouseOut={() => {
+                      setIsZawnCode(false);
+                    }}
+                    href="https://github.com/djballowe/ZAWN"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>
+                  <div
+                    className="underline"
+                    style={{
+                      minHeight: isZawnCode ? "37px" : "2px",
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
             <img src={require("../../images/zawnscreen.png")} alt="" />
@@ -48,8 +107,48 @@ export default function Projects() {
                 in a hub world to record meetings and events that take place.
               </p>
               <div className="project-buttons">
-                <button>Live Site</button>
-                <button>Code</button>
+                <div className="links-container">
+                  <a
+                    onMouseEnter={() => {
+                      setIsHubsLive(true);
+                    }}
+                    onMouseOut={() => {
+                      setIsHubsLive(false);
+                    }}
+                    href="https://hubs.mozilla.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Site
+                  </a>
+                  <div
+                    className="underline"
+                    style={{
+                      minHeight: isHubsLive ? "37px" : "2px",
+                    }}
+                  ></div>{" "}
+                </div>
+                <div className="links-container-code">
+                  <a
+                    onMouseEnter={() => {
+                      setIsHubsCode(true);
+                    }}
+                    onMouseOut={() => {
+                      setIsHubsCode(false);
+                    }}
+                    href="https://github.com/djballowe/hubs"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>
+                  <div
+                    className="underline"
+                    style={{
+                      minHeight: isHubsCode ? "37px" : "2px",
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
@@ -73,8 +172,48 @@ export default function Projects() {
                 deployment.
               </p>
               <div className="project-buttons">
-                <button>Live Site</button>
-                <button>Code</button>
+                <div className="links-container">
+                  <a
+                    onMouseEnter={() => {
+                      setIsArchLive(true);
+                    }}
+                    onMouseOut={() => {
+                      setIsArchLive(false);
+                    }}
+                    href="https://hubs.mozilla.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Site
+                  </a>
+                  <div
+                    className="underline"
+                    style={{
+                      minHeight: isArchLive ? "37px" : "2px",
+                    }}
+                  ></div>{" "}
+                </div>
+                <div className="links-container-code">
+                  <a
+                    onMouseEnter={() => {
+                      setIsArchCode(true);
+                    }}
+                    onMouseOut={() => {
+                      setIsArchCode(false);
+                    }}
+                    href="https://github.com/djballowe/hubs"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Code
+                  </a>
+                  <div
+                    className="underline"
+                    style={{
+                      minHeight: isArchCode ? "37px" : "2px",
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
             <img src={require("../../images/davidballowe.png")} alt="" />

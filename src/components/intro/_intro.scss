@@ -7,21 +7,36 @@
 }
 
 .name {
+  overflow: hidden;
+  height: 100px;
+  overflow: hidden;
   p {
     font-size: 5rem;
+    animation: slideIn 1.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
   }
 }
 
 .intro-paragraph {
+  height: 30px;
+  overflow: hidden;
   margin-top: 10px;
   opacity: 0.5;
   font-size: 1.5rem;
+  p {
+    animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
+  }
 }
 
 .title {
+  height: 100px;
+  overflow: hidden;
   p {
     font-size: 5rem;
     opacity: 0.5;
+    animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
   }
 }
 
@@ -29,8 +44,16 @@
   margin-top: 30px;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  height: 40px;
+  a {
+    color: white;
+    animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
+  }
   svg {
-    padding: 0 10px;
+    padding-right: 10px;
+    cursor: pointer;
     &:first-of-type {
       padding-left: 0px;
     }
@@ -51,6 +74,8 @@
     margin: 0 10px;
     height: 100px;
     bottom: 1%;
+    animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
     &:first-of-type {
       margin-left: 0px;
     }

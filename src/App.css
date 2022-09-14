@@ -137,6 +137,7 @@ body {
   width: 70%;
   margin-top: 50px;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .header {
@@ -147,16 +148,31 @@ body {
 
 .logo {
   font-family: "Playfair Display", serif;
+  overflow: hidden;
+  height: 45px;
+}
+.logo h1 {
+  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .nav-bar {
   display: flex;
   align-items: center;
+  height: 20px;
+  overflow: hidden;
 }
 .nav-bar li {
+  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   text-decoration: none;
   list-style: none;
   padding: 0 20px;
+  cursor: pointer;
 }
 
 .intro-container {
@@ -167,28 +183,63 @@ body {
   position: relative;
 }
 
+.name {
+  overflow: hidden;
+  height: 100px;
+  overflow: hidden;
+}
 .name p {
   font-size: 5rem;
+  -webkit-animation: slideIn 1.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .intro-paragraph {
+  height: 30px;
+  overflow: hidden;
   margin-top: 10px;
   opacity: 0.5;
   font-size: 1.5rem;
 }
+.intro-paragraph p {
+  -webkit-animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 
+.title {
+  height: 100px;
+  overflow: hidden;
+}
 .title p {
   font-size: 5rem;
   opacity: 0.5;
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .icons {
   margin-top: 30px;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  height: 40px;
+}
+.icons a {
+  color: white;
+  -webkit-animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .icons svg {
-  padding: 0 10px;
+  padding-right: 10px;
+  cursor: pointer;
 }
 .icons svg:first-of-type {
   padding-left: 0px;
@@ -209,6 +260,10 @@ body {
   margin: 0 10px;
   height: 100px;
   bottom: 1%;
+  -webkit-animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .intro-buttons button:first-of-type {
   margin-left: 0px;
@@ -220,6 +275,17 @@ body {
 
 .projects-title {
   font-size: 5rem;
+  height: 100px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.inter-animations {
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  visibility: visible;
 }
 
 .projects-list-container {
@@ -270,15 +336,45 @@ body {
 
 .project-buttons {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
-.project-buttons button {
-  background-color: transparent;
-  border: 1px solid white;
-  font-size: 1.5rem;
+.project-buttons a {
+  position: relative;
+  text-decoration: none;
+  z-index: 100;
   color: white;
-  height: 50px;
-  width: 150px;
-  margin: 0 10px;
+  font-size: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+.project-buttons a:first-of-type {
+  padding-left: 0px;
+}
+.project-buttons a:hover {
+  color: black;
+}
+
+.underline {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 1%;
+  transition: all 0.2s ease-in-out;
+}
+
+.links-container {
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  z-index: 15;
+}
+
+.links-container-code {
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  z-index: 15;
 }
 
 .description {
@@ -315,6 +411,9 @@ body {
 .about-icons {
   margin-top: 20px;
 }
+.about-icons a {
+  color: white;
+}
 .about-icons svg {
   padding: 0 10px;
 }
@@ -349,6 +448,8 @@ body {
   margin-top: 200px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 250px;
+  position: relative;
 }
 
 .contact-title {
@@ -360,10 +461,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  width: 70%;
 }
 
 .contact-description {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -371,7 +474,7 @@ body {
 .contact-description p {
   text-align: center;
   line-height: 150%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .contact-description button {
   background-color: transparent;
@@ -382,4 +485,89 @@ body {
   width: 150px;
   border-radius: 5px;
   margin-top: 70px;
+  cursor: pointer;
+}
+
+.contact-icons {
+  margin-top: 20px;
+}
+.contact-icons svg {
+  padding: 0 10px;
+}
+.contact-icons a {
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 1%;
+  color: rgb(124, 124, 124);
+}
+
+.icons-sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.line {
+  height: 100px;
+  width: 2px;
+  background-color: white;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=App.css.map */
