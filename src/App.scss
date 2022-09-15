@@ -136,6 +136,12 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 650px) {
+  .App {
+    width: 90%;
+  }
+}
+
 @import "./components/header/header";
 @import "./components/intro/intro";
 @import "./components/projects/projects";
@@ -144,4 +150,5 @@ body {
 @import "./components/sticky/email";
 @import "./components/sticky/icons";
 @import "./components/intro/animation";
-@import "./components/about/gridanimation"
+@import "./components/about/gridanimation";
+@import "./components/intro/introresponsive";

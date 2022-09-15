@@ -1,0 +1,41 @@
+@media screen and (max-width: 650px) {
+  .name {
+    p {
+      font-size: 13vw;
+    }
+  }
+  .title {
+    p {
+      font-size: 10vw;
+    }
+  }
+  .intro-paragraph {
+    margin-top: 5px;
+    p {
+      font-size: 5vw;
+    }
+  }
+
+  .icons {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+  .name {
+    p {
+      font-size: 3rem;
+    }
+  }
+  .title {
+    p {
+      font-size: 3rem;
+    }
+  }
+  .intro-paragraph {
+    margin-top: 5px;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

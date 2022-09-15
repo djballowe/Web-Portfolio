@@ -140,6 +140,11 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 650px) {
+  .App {
+    width: 90%;
+  }
+}
 .header {
   display: flex;
   align-items: center;
@@ -185,7 +190,7 @@ body {
 
 .name {
   overflow: hidden;
-  height: 100px;
+  height: auto;
   overflow: hidden;
 }
 .name p {
@@ -197,7 +202,7 @@ body {
 }
 
 .intro-paragraph {
-  height: 30px;
+  height: auto;
   overflow: hidden;
   margin-top: 10px;
   opacity: 0.5;
@@ -211,7 +216,7 @@ body {
 }
 
 .title {
-  height: 100px;
+  height: auto;
   overflow: hidden;
 }
 .title p {
@@ -228,7 +233,7 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  height: 40px;
+  height: auto;
 }
 .icons a {
   color: white;
@@ -674,4 +679,36 @@ body {
 #next {
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
+}
+
+@media screen and (max-width: 650px) {
+  .name p {
+    font-size: 13vw;
+  }
+  .title p {
+    font-size: 10vw;
+  }
+  .intro-paragraph {
+    margin-top: 5px;
+  }
+  .intro-paragraph p {
+    font-size: 5vw;
+  }
+  .icons {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+  .name p {
+    font-size: 3rem;
+  }
+  .title p {
+    font-size: 3rem;
+  }
+  .intro-paragraph {
+    margin-top: 5px;
+  }
+  .intro-paragraph p {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=App.css.map */
