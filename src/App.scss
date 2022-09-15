@@ -129,9 +129,13 @@ body {
 }
 
 .App {
+  position: relative;
+}
+
+.main-content-container {
   margin: auto;
   width: 70%;
-  margin-top: 50px;
+  padding-top: 50px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -152,3 +156,5 @@ body {
 @import "./components/intro/animation";
 @import "./components/about/gridanimation";
 @import "./components/intro/introresponsive";
+@import "./components/header/mobilemenu";
+@import "./components/header/headerresponsive";
