@@ -133,15 +133,15 @@ body {
 }
 
 .main-content-container {
-  margin: auto;
-  width: 70%;
+  margin-inline: auto;
+  width: min(70%, 100rem);
   padding-top: 50px;
   margin-bottom: 50px;
   position: relative;
 }
 
 @media screen and (max-width: 650px) {
-  .App {
+  .main-content-container {
     width: 90%;
   }
 }
@@ -158,3 +158,4 @@ body {
 @import "./components/intro/introresponsive";
 @import "./components/header/mobilemenu";
 @import "./components/header/headerresponsive";
+@import "./components/projects/projectresponsive";

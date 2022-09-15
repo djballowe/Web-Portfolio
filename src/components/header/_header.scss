@@ -8,6 +8,7 @@
   font-family: "Playfair Display", serif;
   overflow: hidden;
   height: 45px;
+  z-index: 200;
   h1 {
     animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;

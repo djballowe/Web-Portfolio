@@ -59,7 +59,7 @@ export default function Projects(props) {
             <p>ZAWN</p>
             <p>Full-Stack E-Commerce Site</p>
           </div>
-          <div className="description-container">
+          <div className="description-container" id="zawn">
             <div className="description">
               <p>
                 Full-Stack E-Commerce Site with full functionality. Including
@@ -180,7 +180,7 @@ export default function Projects(props) {
             <p>Architecture Portfolio</p>
             <p>Portfolio Site</p>
           </div>
-          <div className="description-container">
+          <div className="description-container" id="arch">
             <div className="description">
               <p>
                 Engineered a basic portfolio site for the purpose of displaying

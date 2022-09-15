@@ -5,7 +5,8 @@ export default function MobileMenu(props) {
     <div
       className="menu-container"
       style={{
-        display: props.open ? "block" : "none",
+        visibility: props.open ? "visible" : "hidden",
+        opacity: props.open ? "1" : "0",
       }}
       onClick={() => {
         props.click();
@@ -17,28 +18,28 @@ export default function MobileMenu(props) {
             props.handle("projects");
           }}
         >
-          Projects
+          Projects.
         </li>
         <li
           onClick={() => {
             props.handle("about");
           }}
         >
-          About
+          About.
         </li>
         <li
           onClick={() => {
             props.handle("contact");
           }}
         >
-          Contact
+          Contact.
         </li>
         <li
           onClick={() => {
             props.handle("resume");
           }}
         >
-          Resume
+          Resume.
         </li>
       </ul>
     </div>

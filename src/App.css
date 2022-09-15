@@ -137,15 +137,15 @@ body {
 }
 
 .main-content-container {
-  margin: auto;
-  width: 70%;
+  margin-inline: auto;
+  width: min(70%, 100rem);
   padding-top: 50px;
   margin-bottom: 50px;
   position: relative;
 }
 
 @media screen and (max-width: 650px) {
-  .App {
+  .main-content-container {
     width: 90%;
   }
 }
@@ -159,6 +159,7 @@ body {
   font-family: "Playfair Display", serif;
   overflow: hidden;
   height: 45px;
+  z-index: 200;
 }
 .logo h1 {
   -webkit-animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
@@ -322,6 +323,10 @@ body {
           animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  transition: all 0.2s ease-in-out;
+}
+.icons a:hover {
+  color: rgb(121, 121, 121);
 }
 .icons svg {
   padding-right: 10px;
@@ -398,13 +403,12 @@ body {
 .description {
   border-radius: 20px;
   background-color: rgb(62, 62, 62);
-  padding: 20px;
 }
 
 .description-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 .description-container img {
@@ -413,14 +417,15 @@ body {
   filter: drop-shadow(30px 20px #575757);
 }
 .description-container p {
+  padding: 10px 20px;
   line-height: 150%;
-  font-size: 1.4rem;
+  font-size: 1.1vw;
 }
 
 .project-buttons {
-  margin-top: 20px;
   display: flex;
   align-items: center;
+  padding: 10px 20px;
 }
 .project-buttons a {
   position: relative;
@@ -795,7 +800,7 @@ body {
 }
 .menu-container {
   position: absolute;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   transition: all 0.3s ease-in-out;
   z-index: 100;
@@ -822,5 +827,28 @@ body {
   }
   .ham-menu {
     display: block;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .description-container {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .description-container img {
+    width: 100%;
+    filter: none;
+  }
+  .description {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0;
+  }
+  .description p {
+    font-size: 1.2rem;
+  }
+  #zawn,
+#arch {
+    flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=App.css.map */

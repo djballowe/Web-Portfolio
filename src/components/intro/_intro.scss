@@ -50,6 +50,10 @@
     color: white;
     animation: slideIn 0.7s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: rgb(121, 121, 121);
+    }
   }
   svg {
     padding-right: 10px;

@@ -1,0 +1,24 @@
+@media screen and (max-width: 1000px) {
+  .description-container {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      filter: none;
+    }
+  }
+  .description {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  #zawn,
+  #arch {
+    flex-direction: column-reverse;
+  }
+}
