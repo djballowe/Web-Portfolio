@@ -4,6 +4,8 @@
 
 .about-title {
   font-size: 5rem;
+  height: 100px;
+  overflow: hidden;
 }
 
 .about-description-container {
@@ -19,6 +21,7 @@
   background-color: rgb(62, 62, 62);
   padding: 20px;
   border-radius: 20px;
+  opacity: 0;
   p {
     line-height: 200%;
   }
@@ -50,6 +53,7 @@
   border-radius: 5px;
   margin: 10px;
   width: 150px;
+  opacity: 0;
   p {
     margin-top: 10px;
     font-weight: 600;

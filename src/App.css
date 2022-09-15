@@ -152,8 +152,8 @@ body {
   height: 45px;
 }
 .logo h1 {
-  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -165,8 +165,8 @@ body {
   overflow: hidden;
 }
 .nav-bar li {
-  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   text-decoration: none;
@@ -277,19 +277,11 @@ body {
   font-size: 5rem;
   height: 100px;
   overflow: hidden;
-  visibility: hidden;
-}
-
-.inter-animations {
-  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  visibility: visible;
 }
 
 .projects-list-container {
   margin-top: 150px;
+  opacity: 0;
 }
 
 .project-list {
@@ -317,9 +309,16 @@ body {
   font-size: 1.5rem;
 }
 
+.description {
+  border-radius: 20px;
+  background-color: rgb(62, 62, 62);
+  padding: 20px;
+}
+
 .description-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
 }
 .description-container img {
@@ -328,10 +327,8 @@ body {
   filter: drop-shadow(30px 20px #575757);
 }
 .description-container p {
-  border-radius: 20px;
-  background-color: rgb(62, 62, 62);
-  padding: 20px;
-  font-size: 1.2rem;
+  line-height: 150%;
+  font-size: 1.4rem;
 }
 
 .project-buttons {
@@ -344,14 +341,15 @@ body {
   text-decoration: none;
   z-index: 100;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   transition: all 0.2s ease-in-out;
 }
 .project-buttons a:first-of-type {
   padding-left: 0px;
 }
 .project-buttons a:hover {
-  color: black;
+  color: rgb(121, 121, 121);
 }
 
 .underline {
@@ -366,7 +364,7 @@ body {
 .links-container {
   position: relative;
   text-align: center;
-  margin-right: 40px;
+  margin-right: 15px;
   z-index: 15;
 }
 
@@ -382,12 +380,30 @@ body {
   margin-top: 20px;
 }
 
+.int-animations-fade {
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+          animation: fadeIn 1.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition: all ease-in-out;
+}
+
+.inter-animations {
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition: all ease-in-out;
+}
+
 .about-container {
   margin-top: 200px;
 }
 
 .about-title {
   font-size: 5rem;
+  height: 100px;
+  overflow: hidden;
 }
 
 .about-description-container {
@@ -403,6 +419,7 @@ body {
   background-color: rgb(62, 62, 62);
   padding: 20px;
   border-radius: 20px;
+  opacity: 0;
 }
 .about-description p {
   line-height: 200%;
@@ -434,6 +451,7 @@ body {
   border-radius: 5px;
   margin: 10px;
   width: 150px;
+  opacity: 0;
 }
 .image-border p {
   margin-top: 10px;
@@ -455,6 +473,8 @@ body {
 .contact-title {
   font-size: 5rem;
   margin-bottom: 50px;
+  height: 100px;
+  overflow: hidden;
 }
 
 .contact-description-container {
@@ -463,6 +483,7 @@ body {
   align-items: center;
   margin: auto;
   width: 70%;
+  opacity: 0;
 }
 
 .contact-description {
@@ -570,4 +591,87 @@ body {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+@-webkit-keyframes opacityFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacityFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.icons-animation {
+  -webkit-animation: opacityFade 1s ease-in-out;
+          animation: opacityFade 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#SASS {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#git {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+#python {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+#mongodb {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#firebase {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+#node {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+#javascript {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+#react {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+#CSS {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#express {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+#HTML {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+#next {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }/*# sourceMappingURL=App.css.map */

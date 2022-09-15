@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
+import GitHub from "@mdi/react";
+import { mdiGithub } from "@mdi/js";
+import Link from "@mdi/react";
+import { mdiOpenInNew } from "@mdi/js";
 
 export default function Projects(props) {
   const [isZawnLive, setIsZawnLive] = useState(false);
@@ -14,18 +18,43 @@ export default function Projects(props) {
     threshold: 0.1,
   });
 
+  const { ref: projectOne, inView: projectOneVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: projectTwo, inView: projectTwoVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: projectThree, inView: projectThreeVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="projects-container" ref={props.page}>
       <div className="projects-title">
         <p
           className={projectVisible ? "inter-animations" : ""}
           ref={projectRef}
+          style={{
+            visibility: projectVisible ? "visible" : "hidden",
+          }}
         >
           Projects.
         </p>
       </div>
-      <div className="projects-list-container">
-        <div className="projects-list">
+      <div
+        className={
+          projectOneVisible
+            ? "int-animations-fade projects-list-container"
+            : "projects-list-container"
+        }
+        ref={projectOne}
+      >
+        <div>
           <div className="projects-list-title">
             <p>ZAWN</p>
             <p>Full-Stack E-Commerce Site</p>
@@ -35,10 +64,11 @@ export default function Projects(props) {
               <p>
                 Full-Stack E-Commerce Site with full functionality. Including
                 adding items to cart, creating user accounts, adding shipping
-                addresses, secure checkout, and order history details. Created
-                with React, Node.js/Express, Firebase/Firestore, Stripe API,
-                Cloud Functions, deployed with Google Cloud and Firebase
-                Hosting.
+                addresses to account, secure checkout with Stripe, and saved
+                order history details per user. Created with React,
+                Node.js/Express, Firebase/Firestore, Stripe API, Cloud
+                Functions, CI/CD configured with Google Cloud, and deployed with
+                Firebase Hosting.
               </p>
               <div className="project-buttons">
                 <div className="links-container">
@@ -54,14 +84,8 @@ export default function Projects(props) {
                     rel="noreferrer"
                     id="zawn-live"
                   >
-                    Live Site
+                    <Link path={mdiOpenInNew} size={1.3} />
                   </a>
-                  <div
-                    className="underline"
-                    style={{
-                      minHeight: isZawnLive ? "37px" : "2px",
-                    }}
-                  ></div>
                 </div>
                 <div className="links-container-code">
                   <a
@@ -75,14 +99,8 @@ export default function Projects(props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Code
+                    <GitHub path={mdiGithub} size={1.5} />
                   </a>
-                  <div
-                    className="underline"
-                    style={{
-                      minHeight: isZawnCode ? "37px" : "2px",
-                    }}
-                  ></div>
                 </div>
               </div>
             </div>
@@ -90,7 +108,14 @@ export default function Projects(props) {
           </div>
         </div>
       </div>
-      <div className="projects-list-container">
+      <div
+        className={
+          projectTwoVisible
+            ? "int-animations-fade projects-list-container"
+            : "projects-list-container"
+        }
+        ref={projectTwo}
+      >
         <div className="projects-list">
           <div className="projects-list-title-even">
             <p>Mozilla Hubs Record Mode</p>
@@ -119,14 +144,8 @@ export default function Projects(props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live Site
+                    <Link path={mdiOpenInNew} size={1.3} />
                   </a>
-                  <div
-                    className="underline"
-                    style={{
-                      minHeight: isHubsLive ? "37px" : "2px",
-                    }}
-                  ></div>{" "}
                 </div>
                 <div className="links-container-code">
                   <a
@@ -140,21 +159,22 @@ export default function Projects(props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Code
+                    <GitHub path={mdiGithub} size={1.5} />
                   </a>
-                  <div
-                    className="underline"
-                    style={{
-                      minHeight: isHubsCode ? "37px" : "2px",
-                    }}
-                  ></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="projects-list-container">
+      <div
+        className={
+          projectThreeVisible
+            ? "int-animations-fade projects-list-container"
+            : "projects-list-container"
+        }
+        ref={projectThree}
+      >
         <div className="projects-list">
           <div className="projects-list-title">
             <p>Architecture Portfolio</p>
@@ -169,7 +189,8 @@ export default function Projects(props) {
                 practices using media queries. Created with React to display
                 each section as a separate component to easily update
                 information. Configured CI/CD pipeline with Vercel for auto
-                deployment.
+                deployment. Implemented email.js to gather data from contact
+                form and forward emails.
               </p>
               <div className="project-buttons">
                 <div className="links-container">
@@ -184,14 +205,8 @@ export default function Projects(props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live Site
+                    <Link path={mdiOpenInNew} size={1.3} />
                   </a>
-                  <div
-                    className="underline"
-                    style={{
-                      minHeight: isArchLive ? "37px" : "2px",
-                    }}
-                  ></div>{" "}
                 </div>
                 <div className="links-container-code">
                   <a
@@ -205,14 +220,8 @@ export default function Projects(props) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Code
+                    <GitHub path={mdiGithub} size={1.5} />
                   </a>
-                  <div
-                    className="underline"
-                    style={{
-                      minHeight: isArchCode ? "37px" : "2px",
-                    }}
-                  ></div>
                 </div>
               </div>
             </div>
