@@ -9,6 +9,8 @@
 .contact-title {
   font-size: 5rem;
   margin-bottom: 50px;
+  height: 100px;
+  overflow: hidden;
 }
 
 .contact-description-container {
@@ -17,6 +19,7 @@
   align-items: center;
   margin: auto;
   width: 70%;
+  opacity: 0;
 }
 
 .contact-description {

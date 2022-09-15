@@ -1,20 +1,45 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import GitHub from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 import Linkedin from "@mdi/react";
 import { mdiLinkedin } from "@mdi/js";
 import Resume from "@mdi/react";
 import { mdiFileOutline } from "@mdi/js";
-import Email from "@mdi/react";
-import { mdiEmailOutline } from "@mdi/js";
 
 export default function Contact(props) {
+  const { ref: contactRef, inView: contactVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: contactDescriptionRef, inView: contactDescriptionVisible } =
+    useInView({
+      triggerOnce: true,
+      threshold: 0.1,
+    });
+
   return (
     <div className="contact-container" ref={props.page}>
       <div className="contact-title">
-        <p>Contact.</p>
+        <p
+          className={contactVisible ? "inter-animations" : ""}
+          ref={contactRef}
+          style={{
+            visibility: contactVisible ? "visible" : "hidden",
+          }}
+        >
+          Contact.
+        </p>
       </div>
-      <div className="contact-description-container">
+      <div
+        className={
+          contactDescriptionVisible
+            ? "int-animations-fade contact-description-container"
+            : "contact-description-container"
+        }
+        ref={contactDescriptionRef}
+      >
         <div className="contact-description">
           <p>
             I am always looking for new opportunities, so my inbox is open.
