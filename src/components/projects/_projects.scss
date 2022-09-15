@@ -6,17 +6,11 @@
   font-size: 5rem;
   height: 100px;
   overflow: hidden;
-  visibility: hidden;
-}
-
-.inter-animations {
-  animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-  animation-fill-mode: forwards;
-  visibility: visible;
 }
 
 .projects-list-container {
   margin-top: 150px;
+  opacity: 0;
 }
 
 .project-list {
@@ -109,4 +103,16 @@
 .description {
   width: 40%;
   margin-top: 20px;
+}
+
+.int-animations-fade {
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  transition: all ease-in-out;
+}
+
+.inter-animations {
+  animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  animation-fill-mode: forwards;
+  transition: all ease-in-out;
 }

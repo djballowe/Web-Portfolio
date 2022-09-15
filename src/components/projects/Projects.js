@@ -14,18 +14,43 @@ export default function Projects(props) {
     threshold: 0.1,
   });
 
+  const { ref: projectOne, inView: projectOneVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: projectTwo, inView: projectTwoVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: projectThree, inView: projectThreeVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="projects-container" ref={props.page}>
       <div className="projects-title">
         <p
           className={projectVisible ? "inter-animations" : ""}
           ref={projectRef}
+          style={{
+            visibility: projectVisible ? "visible" : "hidden",
+          }}
         >
           Projects.
         </p>
       </div>
-      <div className="projects-list-container">
-        <div className="projects-list">
+      <div
+        className={
+          projectOneVisible
+            ? "int-animations-fade projects-list-container"
+            : "projects-list-container"
+        }
+        ref={projectOne}
+      >
+        <div>
           <div className="projects-list-title">
             <p>ZAWN</p>
             <p>Full-Stack E-Commerce Site</p>
@@ -90,7 +115,14 @@ export default function Projects(props) {
           </div>
         </div>
       </div>
-      <div className="projects-list-container">
+      <div
+        className={
+          projectTwoVisible
+            ? "int-animations-fade projects-list-container"
+            : "projects-list-container"
+        }
+        ref={projectTwo}
+      >
         <div className="projects-list">
           <div className="projects-list-title-even">
             <p>Mozilla Hubs Record Mode</p>
@@ -154,7 +186,14 @@ export default function Projects(props) {
           </div>
         </div>
       </div>
-      <div className="projects-list-container">
+      <div
+        className={
+          projectThreeVisible
+            ? "int-animations-fade projects-list-container"
+            : "projects-list-container"
+        }
+        ref={projectThree}
+      >
         <div className="projects-list">
           <div className="projects-list-title">
             <p>Architecture Portfolio</p>

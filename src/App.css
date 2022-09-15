@@ -152,8 +152,8 @@ body {
   height: 45px;
 }
 .logo h1 {
-  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -165,8 +165,8 @@ body {
   overflow: hidden;
 }
 .nav-bar li {
-  -webkit-animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-          animation: slideUp 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideUp 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   text-decoration: none;
@@ -277,19 +277,11 @@ body {
   font-size: 5rem;
   height: 100px;
   overflow: hidden;
-  visibility: hidden;
-}
-
-.inter-animations {
-  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  visibility: visible;
 }
 
 .projects-list-container {
   margin-top: 150px;
+  opacity: 0;
 }
 
 .project-list {
@@ -380,6 +372,22 @@ body {
 .description {
   width: 40%;
   margin-top: 20px;
+}
+
+.int-animations-fade {
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+          animation: fadeIn 1.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition: all ease-in-out;
+}
+
+.inter-animations {
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+          animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition: all ease-in-out;
 }
 
 .about-container {
