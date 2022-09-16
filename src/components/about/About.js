@@ -74,8 +74,8 @@ export default function About(props) {
             </a>
           </div>
         </div>
-        <div className="image-container">
-          <div className="image-row">
+        <div className="grid-container">
+          <div className="image-container">
             <div
               className={
                 aboutDescriptionVisible
@@ -120,8 +120,7 @@ export default function About(props) {
               <img src={require("../../images/Tech/express.png")} alt="" />
               <p>EXPRESS</p>
             </div>
-          </div>
-          <div>
+
             <div
               className={
                 aboutDescriptionVisible
@@ -166,8 +165,7 @@ export default function About(props) {
               <img src={require("../../images/Tech/nextjs.png")} alt="" />
               <p>NEXT.JS</p>
             </div>
-          </div>
-          <div>
+
             <div
               className={
                 aboutDescriptionVisible
