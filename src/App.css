@@ -586,10 +586,10 @@ body {
 }
 
 .contact-description {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 531px;
 }
 .contact-description p {
   text-align: center;

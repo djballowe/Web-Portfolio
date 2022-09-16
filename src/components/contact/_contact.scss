@@ -23,10 +23,10 @@
 }
 
 .contact-description {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 531px;
   p {
     text-align: center;
     line-height: 150%;
