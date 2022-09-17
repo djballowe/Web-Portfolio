@@ -6,6 +6,7 @@ import Linkedin from "@mdi/react";
 import { mdiLinkedin } from "@mdi/js";
 import Resume from "@mdi/react";
 import { mdiFileOutline } from "@mdi/js";
+import PDF from "../../Docs/David_Ballowe_Resume.pdf";
 
 export default function About(props) {
   const { ref: aboutRef, inView: aboutVisible } = useInView({
@@ -66,7 +67,7 @@ export default function About(props) {
               <Linkedin path={mdiLinkedin} size={1.5} />
             </a>
             <a
-              href="./Docs/David Ballowe Resume.pdf"
+              href={PDF}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -74,8 +75,8 @@ export default function About(props) {
             </a>
           </div>
         </div>
-        <div className="image-container">
-          <div className="image-row">
+        <div className="grid-container">
+          <div className="image-container">
             <div
               className={
                 aboutDescriptionVisible
@@ -120,8 +121,7 @@ export default function About(props) {
               <img src={require("../../images/Tech/express.png")} alt="" />
               <p>EXPRESS</p>
             </div>
-          </div>
-          <div>
+
             <div
               className={
                 aboutDescriptionVisible
@@ -166,8 +166,7 @@ export default function About(props) {
               <img src={require("../../images/Tech/nextjs.png")} alt="" />
               <p>NEXT.JS</p>
             </div>
-          </div>
-          <div>
+
             <div
               className={
                 aboutDescriptionVisible

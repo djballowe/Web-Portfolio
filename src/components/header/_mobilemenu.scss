@@ -1,0 +1,26 @@
+.menu-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 2rem;
+  li {
+    padding: 20px 0;
+  }
+}

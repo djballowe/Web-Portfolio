@@ -6,7 +6,25 @@ export default function Header(props) {
       <div className="logo">
         <h1>DB.</h1>
       </div>
-      <div>
+      <div
+        className="ham-menu"
+        onClick={() => {
+          props.click();
+        }}
+      >
+        <div class="menu-icon">
+          <input
+            class="menu-icon__cheeckbox"
+            type="checkbox"
+            checked={props.open ? true : false}
+          />
+          <div>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div className="desk-menu">
         <ul className="nav-bar">
           <li
             onClick={() => {

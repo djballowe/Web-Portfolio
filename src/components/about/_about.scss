@@ -1,5 +1,7 @@
 .about-container {
   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-title {
@@ -10,27 +12,28 @@
 
 .about-description-container {
   margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .about-description {
-  width: 40%;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   background-color: rgb(62, 62, 62);
-  padding: 20px;
   border-radius: 20px;
   opacity: 0;
   p {
-    line-height: 200%;
+    padding: 20px;
+    line-height: 150%;
   }
 }
 
 .about-icons {
-  margin-top: 20px;
+  padding: 0 0 20px 20px;
   a {
     color: white;
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: rgb(121, 121, 121);
+    }
   }
   svg {
     padding: 0 10px;
@@ -40,26 +43,34 @@
   }
 }
 
-.image-container {
-  display: flex;
-}
-
-.image-border {
+.grid-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border: 2px solid white;
-  border-radius: 5px;
-  margin: 10px;
-  width: 150px;
+  margin-top: 20px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  gap: 10px;
+  img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.image-border {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
   opacity: 0;
   p {
-    margin-top: 10px;
-    font-weight: 600;
-  }
-  img {
-    width: auto;
-    height: 80px;
+    font-size: 0.9rem;
   }
 }

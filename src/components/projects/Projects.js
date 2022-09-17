@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
 import GitHub from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
@@ -6,13 +6,6 @@ import Link from "@mdi/react";
 import { mdiOpenInNew } from "@mdi/js";
 
 export default function Projects(props) {
-  const [isZawnLive, setIsZawnLive] = useState(false);
-  const [isZawnCode, setIsZawnCode] = useState(false);
-  const [isHubsLive, setIsHubsLive] = useState(false);
-  const [isHubsCode, setIsHubsCode] = useState(false);
-  const [isArchLive, setIsArchLive] = useState(false);
-  const [isArchCode, setIsArchCode] = useState(false);
-
   const { ref: projectRef, inView: projectVisible } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -59,7 +52,7 @@ export default function Projects(props) {
             <p>ZAWN</p>
             <p>Full-Stack E-Commerce Site</p>
           </div>
-          <div className="description-container">
+          <div className="description-container" id="zawn">
             <div className="description">
               <p>
                 Full-Stack E-Commerce Site with full functionality. Including
@@ -73,12 +66,6 @@ export default function Projects(props) {
               <div className="project-buttons">
                 <div className="links-container">
                   <a
-                    onMouseEnter={() => {
-                      setIsZawnLive(true);
-                    }}
-                    onMouseOut={() => {
-                      setIsZawnLive(false);
-                    }}
                     href="https://zawnshop.com/"
                     target="_blank"
                     rel="noreferrer"
@@ -89,12 +76,6 @@ export default function Projects(props) {
                 </div>
                 <div className="links-container-code">
                   <a
-                    onMouseEnter={() => {
-                      setIsZawnCode(true);
-                    }}
-                    onMouseOut={() => {
-                      setIsZawnCode(false);
-                    }}
                     href="https://github.com/djballowe/ZAWN"
                     target="_blank"
                     rel="noreferrer"
@@ -118,7 +99,7 @@ export default function Projects(props) {
       >
         <div className="projects-list">
           <div className="projects-list-title-even">
-            <p>Mozilla Hubs Record Mode</p>
+            <p>Mozilla Hubs</p>
             <p>Open-Source Contributions</p>
           </div>
           <div className="description-container">
@@ -134,12 +115,6 @@ export default function Projects(props) {
               <div className="project-buttons">
                 <div className="links-container">
                   <a
-                    onMouseEnter={() => {
-                      setIsHubsLive(true);
-                    }}
-                    onMouseOut={() => {
-                      setIsHubsLive(false);
-                    }}
                     href="https://hubs.mozilla.com/"
                     target="_blank"
                     rel="noreferrer"
@@ -149,13 +124,7 @@ export default function Projects(props) {
                 </div>
                 <div className="links-container-code">
                   <a
-                    onMouseEnter={() => {
-                      setIsHubsCode(true);
-                    }}
-                    onMouseOut={() => {
-                      setIsHubsCode(false);
-                    }}
-                    href="https://github.com/djballowe/hubs"
+                    href="https://github.com/mozilla/hubs/pull/5718"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -180,7 +149,7 @@ export default function Projects(props) {
             <p>Architecture Portfolio</p>
             <p>Portfolio Site</p>
           </div>
-          <div className="description-container">
+          <div className="description-container" id="arch">
             <div className="description">
               <p>
                 Engineered a basic portfolio site for the purpose of displaying
@@ -195,13 +164,7 @@ export default function Projects(props) {
               <div className="project-buttons">
                 <div className="links-container">
                   <a
-                    onMouseEnter={() => {
-                      setIsArchLive(true);
-                    }}
-                    onMouseOut={() => {
-                      setIsArchLive(false);
-                    }}
-                    href="https://hubs.mozilla.com/"
+                    href="https://www.davidballowe.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -210,13 +173,7 @@ export default function Projects(props) {
                 </div>
                 <div className="links-container-code">
                   <a
-                    onMouseEnter={() => {
-                      setIsArchCode(true);
-                    }}
-                    onMouseOut={() => {
-                      setIsArchCode(false);
-                    }}
-                    href="https://github.com/djballowe/hubs"
+                    href="https://github.com/djballowe/Arch-Portfolio"
                     target="_blank"
                     rel="noreferrer"
                   >

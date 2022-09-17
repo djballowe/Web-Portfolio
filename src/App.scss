@@ -129,11 +129,21 @@ body {
 }
 
 .App {
-  margin: auto;
-  width: 70%;
-  margin-top: 50px;
+  position: relative;
+}
+
+.main-content-container {
+  margin-inline: auto;
+  width: min(70%, 100rem);
+  padding-top: 50px;
   margin-bottom: 50px;
   position: relative;
+}
+
+@media screen and (max-width: 650px) {
+  .main-content-container {
+    width: 90%;
+  }
 }
 
 @import "./components/header/header";
@@ -144,4 +154,9 @@ body {
 @import "./components/sticky/email";
 @import "./components/sticky/icons";
 @import "./components/intro/animation";
-@import "./components/about/gridanimation"
+@import "./components/about/gridanimation";
+@import "./components/intro/introresponsive";
+@import "./components/header/mobilemenu";
+@import "./components/header/headerresponsive";
+@import "./components/projects/projectresponsive";
+@import "./components/about/aboutresponsive";
