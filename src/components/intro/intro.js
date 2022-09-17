@@ -7,6 +7,7 @@ import Resume from "@mdi/react";
 import { mdiFileOutline } from "@mdi/js";
 import Arrow from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
+import pdf from "../../Docs/David_Ballowe_Resume.pdf";
 
 export default function Intro() {
   return (
@@ -31,11 +32,7 @@ export default function Intro() {
         >
           <Linkedin path={mdiLinkedin} size={1.5} />
         </a>
-        <a
-          href="./Docs/David Ballowe Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={pdf} target="_blank" rel="noreferrer">
           <Resume path={mdiFileOutline} size={1.5} />
         </a>
       </div>

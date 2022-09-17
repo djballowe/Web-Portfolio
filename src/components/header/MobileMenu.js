@@ -1,4 +1,5 @@
 import React from "react";
+import PDF from "../../Docs/David_Ballowe_Resume.pdf";
 
 export default function MobileMenu(props) {
   return (
@@ -34,12 +35,10 @@ export default function MobileMenu(props) {
         >
           Contact.
         </li>
-        <li
-          onClick={() => {
-            props.handle("resume");
-          }}
-        >
-          Resume.
+        <li>
+          <a href={PDF} target="_blank" rel="noreferrer">
+            Resume.
+          </a>
         </li>
       </ul>
     </div>

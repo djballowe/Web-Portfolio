@@ -118,7 +118,7 @@ export default function Projects(props) {
       >
         <div className="projects-list">
           <div className="projects-list-title-even">
-            <p>Mozilla Hubs Record Mode</p>
+            <p>Mozilla Hubs</p>
             <p>Open-Source Contributions</p>
           </div>
           <div className="description-container">
@@ -155,7 +155,7 @@ export default function Projects(props) {
                     onMouseOut={() => {
                       setIsHubsCode(false);
                     }}
-                    href="https://github.com/djballowe/hubs"
+                    href="https://github.com/mozilla/hubs/pull/5718"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -201,7 +201,7 @@ export default function Projects(props) {
                     onMouseOut={() => {
                       setIsArchLive(false);
                     }}
-                    href="https://hubs.mozilla.com/"
+                    href="https://www.davidballowe.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -216,7 +216,7 @@ export default function Projects(props) {
                     onMouseOut={() => {
                       setIsArchCode(false);
                     }}
-                    href="https://github.com/djballowe/hubs"
+                    href="https://github.com/djballowe/Arch-Portfolio"
                     target="_blank"
                     rel="noreferrer"
                   >

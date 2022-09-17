@@ -4,6 +4,10 @@
   height: 100vh;
   transition: all 0.3s ease-in-out;
   z-index: 100;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .mobile-menu {

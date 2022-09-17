@@ -6,6 +6,7 @@ import Linkedin from "@mdi/react";
 import { mdiLinkedin } from "@mdi/js";
 import Resume from "@mdi/react";
 import { mdiFileOutline } from "@mdi/js";
+import PDF from "../../Docs/David_Ballowe_Resume.pdf";
 
 export default function Contact(props) {
   const { ref: contactRef, inView: contactVisible } = useInView({
@@ -53,7 +54,7 @@ export default function Contact(props) {
             <a href="https://www.linkedin.com/in/david-ballowe-90a164178/">
               <Linkedin path={mdiLinkedin} size={1.5} />
             </a>
-            <a href="">
+            <a href={PDF} target="_blank" rel="noreferrer">
               <Resume path={mdiFileOutline} size={1.5} />
             </a>
           </div>

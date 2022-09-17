@@ -188,6 +188,8 @@ body {
 .ham-menu {
   display: none;
   z-index: 200;
+  height: auto;
+  overflow: hidden;
 }
 
 .menu-icon {
@@ -813,6 +815,10 @@ body {
   transition: all 0.3s ease-in-out;
   z-index: 100;
 }
+.menu-container a {
+  color: white;
+  text-decoration: none;
+}
 
 .mobile-menu {
   display: flex;
@@ -858,6 +864,14 @@ body {
   #zawn,
 #arch {
     flex-direction: column-reverse;
+  }
+  .projects-list-container {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .description-container p {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 600px) {
@@ -930,7 +944,7 @@ body {
     max-width: 600px;
   }
   .about-description p {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
   .image-container {
     grid-template-columns: 175px 175px 175px;
