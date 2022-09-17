@@ -184,6 +184,10 @@ body {
   padding: 0 20px;
   cursor: pointer;
 }
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+}
 
 .ham-menu {
   display: none;
