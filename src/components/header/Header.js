@@ -1,4 +1,5 @@
 import React from "react";
+import PDF from "../../Docs/David_Ballowe_Resume.pdf";
 
 export default function Header(props) {
   return (
@@ -47,7 +48,11 @@ export default function Header(props) {
           >
             Contact
           </li>
-          <li>Resume</li>
+          <li>
+            <a href={PDF} target="_blank" rel="noreferrer">
+              Resume.
+            </a>
+          </li>
         </ul>
       </div>
     </div>
