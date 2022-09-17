@@ -522,6 +522,10 @@ body {
 }
 .about-icons a {
   color: white;
+  transition: all 0.2s ease-in-out;
+}
+.about-icons a:hover {
+  color: rgb(121, 121, 121);
 }
 .about-icons svg {
   padding: 0 10px;
@@ -586,6 +590,11 @@ body {
   width: 70%;
   opacity: 0;
 }
+.contact-description-container button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
 
 .contact-description {
   display: flex;
@@ -617,7 +626,11 @@ body {
   padding: 0 10px;
 }
 .contact-icons a {
+  transition: all 0.2s ease-in-out;
   color: white;
+}
+.contact-icons a:hover {
+  color: rgb(121, 121, 121);
 }
 
 .footer {
