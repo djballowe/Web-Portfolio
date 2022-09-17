@@ -48,10 +48,18 @@ export default function Contact(props) {
             Email and I'll get back to you as soon as possible.
           </p>
           <div className="contact-icons">
-            <a href="https://github.com/djballowe">
+            <a
+              href="https://github.com/djballowe"
+              target="_blank"
+              rel="noreferrer"
+            >
               <GitHub path={mdiGithub} size={1.5} />
             </a>
-            <a href="https://www.linkedin.com/in/david-ballowe-90a164178/">
+            <a
+              href="https://www.linkedin.com/in/david-ballowe-90a164178/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Linkedin path={mdiLinkedin} size={1.5} />
             </a>
             <a href={PDF} target="_blank" rel="noreferrer">
