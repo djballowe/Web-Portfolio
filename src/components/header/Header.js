@@ -32,21 +32,21 @@ export default function Header(props) {
               props.handle("projects");
             }}
           >
-            Projects
+            Projects.
           </li>
           <li
             onClick={() => {
               props.handle("about");
             }}
           >
-            About
+            About.
           </li>
           <li
             onClick={() => {
               props.handle("contact");
             }}
           >
-            Contact
+            Contact.
           </li>
           <li>
             <a href={PDF} target="_blank" rel="noreferrer">

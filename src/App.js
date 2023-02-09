@@ -6,6 +6,7 @@ import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import { useRef, useState } from "react";
 import MobileMenu from "./components/header/MobileMenu";
+import SideBar from "./components/sidebar/Sidebar";
 
 function App() {
   const projectsRef = useRef();
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <SideBar />
       <MobileMenu open={isMobileOpen} click={handleClick} handle={handleRef} />
       <div className="main-content-container">
         <Header handle={handleRef} click={handleClick} open={isMobileOpen} />
