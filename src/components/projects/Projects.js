@@ -6,25 +6,28 @@ import Link from "@mdi/react";
 import { mdiOpenInNew } from "@mdi/js";
 
 export default function Projects(props) {
-  const { ref: projectRef, inView: projectVisible } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const links = {
+    zawn: "https://zawnshop.com/",
+    mozilla: "https://hubs.mozilla.com/",
+    arch: "https://www.davidballowe.com/",
+  };
 
-  const { ref: projectOne, inView: projectOneVisible } = useInView({
+  const triggerOptions = {
     triggerOnce: true,
-    threshold: 0.1,
-  });
+    threshhold: 0.1,
+  };
 
-  const { ref: projectTwo, inView: projectTwoVisible } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const { ref: projectRef, inView: projectVisible } = useInView(triggerOptions);
 
-  const { ref: projectThree, inView: projectThreeVisible } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const { ref: projectOne, inView: projectOneVisible } = useInView(triggerOptions);
+
+  const { ref: projectTwo, inView: projectTwoVisible } = useInView(triggerOptions);
+
+  const { ref: projectThree, inView: projectThreeVisible } = useInView(triggerOptions);
+
+  const handleClick = (e) => {
+    window.open(links[e.target.id], "_blank");
+  };
 
   return (
     <div className="projects-container" ref={props.page}>
@@ -85,7 +88,12 @@ export default function Projects(props) {
                 </div>
               </div>
             </div>
-            <img src={require("../../images/zawnscreen.png")} alt="" />
+            <img
+              src={require("../../images/zawnscreen.png")}
+              alt=""
+              onClick={handleClick}
+              id="zawn"
+            />
           </div>
         </div>
       </div>
@@ -103,7 +111,12 @@ export default function Projects(props) {
             <p>Open-Source Contributions</p>
           </div>
           <div className="description-container">
-            <img src={require("../../images/hubs.png")} alt="" />
+            <img
+              src={require("../../images/hubs.png")}
+              alt=""
+              onClick={handleClick}
+              id="mozilla"
+            />
             <div className="description">
               <p>
                 Worked with the Community Manager at Mozilla along with a small
@@ -182,7 +195,12 @@ export default function Projects(props) {
                 </div>
               </div>
             </div>
-            <img src={require("../../images/davidballowe.png")} alt="" />
+            <img
+              src={require("../../images/davidballowe.png")}
+              alt=""
+              onClick={handleClick}
+              id="arch"
+            />
           </div>
         </div>
       </div>

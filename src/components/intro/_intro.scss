@@ -1,9 +1,11 @@
 .intro-container {
-  height: calc(100vh - 92.5px);
+  height: calc(100vh - 121.9px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
+  margin: 0 100px 0 100px;
+  justify-content: center;
+  max-width: 1100px;
 }
 
 .name {
@@ -17,15 +19,69 @@
   }
 }
 
+.name-title {
+  transform: translateY(-15%);
+  padding: 60px;
+}
+
+.name-title::before,
+.name-title::after {
+  opacity: 0;
+  animation: opacity 1s ease-in-out;
+  animation-fill-mode: forwards;
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 100px;
+}
+
+.name-title::before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.name-title::after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
 .intro-paragraph {
   height: auto;
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: 20px;
   opacity: 0.5;
-  font-size: 1.5rem;
+  font-size: 2rem;
   p {
     animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
+  }
+}
+
+.details-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-top: 50px;
+  justify-content: space-between;
+  opacity: 0.5;
+  height: auto;
+  overflow: hidden;
+  div {
+    animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation-fill-mode: forwards;
+    &:nth-of-type(2) {
+      margin-left: 30px;
+    }
+    &:nth-of-type(3) {
+      margin-left: 30px;
+    }
+  }
+  .details {
+    max-width: 300px;
   }
 }
 
@@ -34,7 +90,6 @@
   overflow: hidden;
   p {
     font-size: 5rem;
-    opacity: 0.5;
     animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
   }
@@ -73,15 +128,24 @@
     position: absolute;
     background-color: transparent;
     border: none;
-    color: rgba(255, 255, 255, 0.514);
+    color: white;
     font-size: 2rem;
     margin: 0 10px;
     height: 100px;
     bottom: 1%;
-    animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
-    animation-fill-mode: forwards;
     &:first-of-type {
       margin-left: 0px;
     }
   }
+}
+
+.bounce-animation {
+  animation: bounce 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.arrow-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  animation-fill-mode: forwards;
 }

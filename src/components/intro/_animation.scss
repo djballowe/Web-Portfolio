@@ -26,3 +26,33 @@
     opacity: 1;
   }
 }
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+  10% {
+    transform: translateY(-10px)
+  }
+  20% {
+    transform: translateY(0)
+  }
+  30% {
+    transform: translateY(-5px)
+  }
+  40% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
