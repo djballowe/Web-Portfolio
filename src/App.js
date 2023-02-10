@@ -32,8 +32,8 @@ function App() {
     <div className="App">
       <SideBar />
       <MobileMenu open={isMobileOpen} click={handleClick} handle={handleRef} />
+      <Header handle={handleRef} click={handleClick} open={isMobileOpen} />
       <div className="main-content-container">
-        <Header handle={handleRef} click={handleClick} open={isMobileOpen} />
         <Intro />
         <Projects page={projectsRef} />
         <About page={aboutRef} />
