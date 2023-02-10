@@ -27,7 +27,13 @@ export default function SideBar() {
         <div className="line"></div>
       </div>
       <div className="right">
-        <p>db@davidballowe.com</p>
+        <p
+          onClick={() => {
+            window.location.href = "mailto:db@davidballowe.com";
+          }}
+        >
+          db@davidballowe.com
+        </p>
         <div className="line"></div>
       </div>
     </div>

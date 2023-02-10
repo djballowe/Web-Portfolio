@@ -472,6 +472,7 @@ body {
   width: 50%;
   border-radius: 10px;
   filter: drop-shadow(30px 20px #575757);
+  cursor: pointer;
 }
 .description-container p {
   padding: 10px 20px;
@@ -1015,6 +1016,7 @@ body {
 }
 
 .left {
+  position: relative;
   width: 198.45px;
   height: 350px;
   display: flex;

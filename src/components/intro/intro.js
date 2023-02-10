@@ -35,21 +35,6 @@ export default function Intro() {
           </div>
         </div>
       </div>
-      {/* <div className="icons">
-        <a href="https://github.com/djballowe" target="_blank" rel="noreferrer">
-          <GitHub path={mdiGithub} size={1.5} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/david-ballowe-90a164178/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Linkedin path={mdiLinkedin} size={1.5} />
-        </a>
-        <a href={pdf} target="_blank" rel="noreferrer">
-          <Resume path={mdiFileOutline} size={1.5} />
-        </a>
-      </div> */}
       <div className="intro-buttons">
         <button
           className={`intro-buttons ${
