@@ -126,6 +126,11 @@ table {
 body {
   font-family: "Roboto", sans-serif;
   color: white;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .App {
