@@ -5,6 +5,7 @@
   position: relative;
   margin: 0 100px 0 100px;
   justify-content: center;
+  align-items: center;
   max-width: 1100px;
 }
 
@@ -63,15 +64,15 @@
 
 .details-container {
   display: flex;
-  align-items: center;
   font-size: 1.4rem;
-  margin-top: 50px;
+  margin-top: 40px;
   justify-content: space-between;
-  opacity: 0.5;
+  position: relative;
+  color: rgb(125, 125, 125);
   height: auto;
   overflow: hidden;
   div {
-    animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+    animation: slideIn .8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
     animation-fill-mode: forwards;
     &:nth-of-type(2) {
       margin-left: 30px;
@@ -82,6 +83,20 @@
   }
   .details {
     max-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    p {
+      margin-top: 10px;
+    }
+    .bullet {
+      opacity: 0;
+      animation: opacity 0.3s ease-in-out;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      top: 0;
+      left: 0;
+      color: white;
+    }
   }
 }
 

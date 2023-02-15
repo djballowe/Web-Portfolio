@@ -130,6 +130,11 @@ table {
 body {
   font-family: "Roboto", sans-serif;
   color: white;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .App {
@@ -143,7 +148,7 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   .main-content-container {
     width: 90%;
   }
@@ -272,6 +277,7 @@ body {
   position: relative;
   margin: 0 100px 0 100px;
   justify-content: center;
+  align-items: center;
   max-width: 1100px;
 }
 
@@ -330,16 +336,16 @@ body {
 
 .details-container {
   display: flex;
-  align-items: center;
   font-size: 1.4rem;
-  margin-top: 50px;
+  margin-top: 40px;
   justify-content: space-between;
-  opacity: 0.5;
+  position: relative;
+  color: rgb(125, 125, 125);
   height: auto;
   overflow: hidden;
 }
 .details-container div {
-  animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  animation: slideIn 0.8s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   animation-fill-mode: forwards;
 }
 .details-container div:nth-of-type(2) {
@@ -350,6 +356,20 @@ body {
 }
 .details-container .details {
   max-width: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+.details-container .details p {
+  margin-top: 10px;
+}
+.details-container .details .bullet {
+  opacity: 0;
+  animation: opacity 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  top: 0;
+  left: 0;
+  color: white;
 }
 
 .title {
@@ -823,33 +843,72 @@ body {
 
 @media screen and (max-width: 650px) {
   .name p {
-    font-size: 13vw;
+    font-size: 5vh;
   }
   .title p {
-    font-size: 10vw;
+    font-size: 3.5vh;
   }
   .intro-paragraph {
     margin-top: 5px;
   }
   .intro-paragraph p {
-    font-size: 5vw;
+    font-size: 2vh;
   }
   .icons {
     margin-top: 15px;
   }
+  .name-title {
+    padding: 30px;
+  }
+  .intro-container {
+    margin: 0px;
+  }
+  .details-container div {
+    font-size: 2vh;
+  }
+  .name-title::before,
+  .name-title::after {
+    width: 20px;
+    height: 50px;
+  }
 }
-@media screen and (min-width: 651px) and (max-width: 1000px) {
+@media screen and (min-width: 651px) and (max-width: 1400px) {
   .name p {
-    font-size: 3rem;
+    font-size: 3.4rem;
   }
   .title p {
-    font-size: 3rem;
+    font-size: 3.4rem;
   }
   .intro-paragraph {
     margin-top: 5px;
   }
   .intro-paragraph p {
     font-size: 1.5rem;
+  }
+  .intro-container {
+    height: calc(100vh - 100px);
+    margin: 0px;
+    transform: translateY(50px);
+  }
+  .details-container div {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .details-container {
+    display: block;
+    margin-top: 10px;
+  }
+  .details-container div:nth-of-type(2) {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .details-container div:nth-of-type(3) {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .intro-buttons {
+    display: none;
   }
 }
 .menu-container {
@@ -1059,4 +1118,10 @@ body {
   width: 1px;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.61);
+}
+
+@media screen and (max-width: 1000px) {
+  .side-bar-container {
+    display: none;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -35,8 +35,8 @@ function App() {
       <Header handle={handleRef} click={handleClick} open={isMobileOpen} />
       <div className="main-content-container">
         <Intro />
-        <Projects page={projectsRef} />
         <About page={aboutRef} />
+        <Projects page={projectsRef} />
         <Contact page={contactRef} />
       </div>
     </div>
@@ -44,3 +44,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

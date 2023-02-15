@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import Arrow from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
+import ArrowRight from "@mdi/react";
+import { mdiMenuRight } from "@mdi/js";
+import GitHub from "@mdi/react";
+import { mdiGithub } from "@mdi/js";
+import Resume from "@mdi/react";
+import { mdiFileOutline } from "@mdi/js";
+import pdf from "../../Docs/David_Ballowe_Resume.pdf";
+import Linkedin from "@mdi/react";
+import { mdiLinkedin } from "@mdi/js";
 
 export default function Intro() {
   const [fadedIn, setFadedIn] = useState(false);
@@ -23,14 +32,40 @@ export default function Intro() {
             on user experience.
           </p>
         </div>
+        {/* <div className="icons">
+          <a
+            href="https://github.com/djballowe"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitHub path={mdiGithub} size={1.5} />
+          </a>
+          <a href={pdf} target="_blank" rel="noreferrer">
+            <Resume path={mdiFileOutline} size={1.5} />
+          </a>
+          <a href="https://www.linkedin.com/in/david-ballowe-90a164178/"
+            target="_blank"
+            rel="noreferrer">
+            <Linkedin path={mdiLinkedin} size={1.5} />
+          </a>
+        </div> */}
         <div className="details-container">
           <div className="details">
+            <div className="bullet">
+              <ArrowRight path={mdiMenuRight} size={2} />
+            </div>
             <p>Highly skilled at crafting solid scalable React.</p>
           </div>
           <div className="details">
+            <div className="bullet">
+              <ArrowRight path={mdiMenuRight} size={2} />
+            </div>
             <p>Experienced in the media and video streaming space.</p>
           </div>
           <div className="details">
+            <div className="bullet">
+              <ArrowRight path={mdiMenuRight} size={2} />
+            </div>
             <p>Familiar with startup environments.</p>
           </div>
         </div>

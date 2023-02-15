@@ -126,6 +126,11 @@ table {
 body {
   font-family: "Roboto", sans-serif;
   color: white;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .App {
@@ -139,7 +144,7 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
   .main-content-container {
     width: 90%;
   }
@@ -160,3 +165,4 @@ body {
 @import "./components/projects/projectresponsive";
 @import "./components/about/aboutresponsive";
 @import "./components/sidebar/sidebar";
+@import "./components/work/work";

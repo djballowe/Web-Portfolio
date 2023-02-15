@@ -1,35 +1,50 @@
 @media screen and (max-width: 650px) {
   .name {
     p {
-      font-size: 13vw;
+      font-size: 5vh;
     }
   }
   .title {
     p {
-      font-size: 10vw;
+      font-size: 3.5vh;
     }
   }
   .intro-paragraph {
     margin-top: 5px;
     p {
-      font-size: 5vw;
+      font-size: 2vh;
     }
   }
-
   .icons {
     margin-top: 15px;
   }
+  .name-title {
+    padding: 30px;
+  }
+  .intro-container {
+    margin: 0px;
+  }
+  .details-container {
+    div {
+      font-size: 2vh;
+    }
+  }
+  .name-title::before,
+  .name-title::after {
+    width: 20px;
+    height: 50px;
+  }
 }
 
-@media screen and (min-width: 651px) and (max-width: 1000px) {
+@media screen and (min-width: 651px) and (max-width: 1400px) {
   .name {
     p {
-      font-size: 3rem;
+      font-size: 3.4rem;
     }
   }
   .title {
     p {
-      font-size: 3rem;
+      font-size: 3.4rem;
     }
   }
   .intro-paragraph {
@@ -38,4 +53,52 @@
       font-size: 1.5rem;
     }
   }
+  .intro-container {
+    height: calc(100vh - 100px);
+    margin: 0px;
+    transform: translateY(50px);
+  }
+  .details-container {
+    div {
+      font-size: 90%;
+    }
+  }
 }
+
+@media screen and (max-width: 1400px) {
+  .details-container {
+    display: block;
+    margin-top: 10px;
+    div {
+      &:nth-of-type(2) {
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+      &:nth-of-type(3) {
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .intro-buttons {
+    display: none;
+  }
+}
+
+// @media screen and (max-width: 1200px) {
+//   .intro-container {
+//     margin: 0px;
+//   }
+//   .name-title {
+//     padding: 30px;
+//   }
+// }
+
+// @media screen and (max-width: 900px) {
+//   .intro-container {
+//     margin: 0px;
+//   }
+//   .name-title {
+//     padding: 30px;
+//   }
+// }
