@@ -7,11 +7,10 @@ import Contact from "./components/contact/Contact";
 import { useRef, useState } from "react";
 import MobileMenu from "./components/header/MobileMenu";
 import SideBar from "./components/sidebar/Sidebar";
+import Work from "./components/work/Work";
 
 function App() {
-  const projectsRef = useRef();
-  const aboutRef = useRef();
-  const contactRef = useRef();
+  const { projectsRef, aboutRef, contactRef, workRef } = useRef();
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -20,6 +19,7 @@ function App() {
       projects: projectsRef,
       about: aboutRef,
       contact: contactRef,
+      work: workRef,
     };
     pageLocations[location].current.scrollIntoView({ behavior: "smooth" });
   };
@@ -36,6 +36,7 @@ function App() {
       <div className="main-content-container">
         <Intro />
         <About page={aboutRef} />
+        <Work page={workRef} />
         <Projects page={projectsRef} />
         <Contact page={contactRef} />
       </div>
@@ -44,7 +45,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
