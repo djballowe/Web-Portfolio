@@ -10,7 +10,10 @@ import SideBar from "./components/sidebar/Sidebar";
 import Work from "./components/work/Work";
 
 function App() {
-  const { projectsRef, aboutRef, contactRef, workRef } = useRef();
+  const projectsRef = useRef();
+  const aboutRef = useRef();
+  const contactRef = useRef();
+  const workRef = useRef();
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
