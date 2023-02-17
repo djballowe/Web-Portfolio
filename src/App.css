@@ -491,7 +491,7 @@ body::-webkit-scrollbar {
 .description-container img {
   width: 50%;
   border-radius: 10px;
-  filter: drop-shadow(30px 20px #575757);
+  filter: drop-shadow(30px 20px rgb(121, 121, 121));
   cursor: pointer;
 }
 .description-container p {
@@ -711,7 +711,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   position: absolute;
   bottom: 1%;
-  color: rgb(124, 124, 124);
+  color: rgb(121, 121, 121);
 }
 
 .icons-sticky {
@@ -1134,9 +1134,14 @@ body::-webkit-scrollbar {
   }
 }
 .work-container {
-  margin-top: 100px;
-  margin-inline: auto;
-  width: min(70%, 100rem);
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-description-container {
+  margin-top: 50px;
 }
 
 .work-description {
@@ -1147,6 +1152,7 @@ body::-webkit-scrollbar {
   font-size: 5rem;
   height: 100px;
   overflow: hidden;
+  align-self: flex-start;
 }
 
 .work-list-title {
@@ -1166,7 +1172,10 @@ body::-webkit-scrollbar {
 .bullet-container {
   display: flex;
   align-items: flex-start;
-  margin: 15px 0 15px 0;
+  margin: 30px 0 30px 0;
+}
+.bullet-container:last-of-type {
+  margin-bottom: 0px;
 }
 .bullet-container .bullet {
   transform: translateY(-9px);
@@ -1178,4 +1187,84 @@ body::-webkit-scrollbar {
   .work-container {
     width: auto;
   }
+}
+.pick-border-container {
+  position: relative;
+  margin-top: 100px;
+  padding: 60px;
+}
+
+.pick-container::before,
+.pick-container::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 100px;
+}
+
+.pick-container::before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.pick-container::after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.pick-container {
+  display: flex;
+  max-width: 1000px;
+  height: auto;
+}
+.pick-container .companies {
+  position: relative;
+  margin-right: 30px;
+}
+.pick-container .companies .line {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  background-color: white;
+  height: 82px;
+  width: 2px;
+}
+.pick-container .companies .company-buttons {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid rgb(72, 72, 72);
+}
+.pick-container .companies .company-buttons button {
+  padding: 0 20px 0 20px;
+  height: 42px;
+  width: 200px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+.content-title p {
+  font-size: 1.3rem;
+}
+.content-title p:last-of-type {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.content-title span {
+  transition: 0.2s all ease-in-out;
+  color: rgb(121, 121, 121);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content-title span:hover {
+  color: white;
+  text-decoration: underline;
 }/*# sourceMappingURL=App.css.map */

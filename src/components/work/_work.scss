@@ -1,7 +1,12 @@
 .work-container {
-  margin-top: 100px;
-  margin-inline: auto;
-  width: min(70%, 100rem);
+  margin-top: $section-spacing;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-description-container {
+  margin-top: 50px;
 }
 
 .work-description {
@@ -12,11 +17,12 @@
   font-size: 5rem;
   height: 100px;
   overflow: hidden;
+  align-self: flex-start;
 }
 
 .work-list-title {
   margin: 30px 0 30px 0;
-  
+
   p {
     font-size: 2rem;
     &:nth-of-type(2) {
@@ -32,7 +38,10 @@
 .bullet-container {
   display: flex;
   align-items: flex-start;
-  margin: 15px 0 15px 0;
+  margin: 30px 0 30px 0;
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
   .bullet {
     transform: translateY(-9px);
     display: flex;
@@ -41,7 +50,92 @@
 }
 
 @media screen and (max-width: 750px) {
-    .work-container {
-        width: auto;
+  .work-container {
+    width: auto;
+  }
+}
+
+// custom job selector thing
+
+.pick-border-container {
+  position: relative;
+  margin-top: 100px;
+  padding: 60px;
+}
+
+.pick-container::before,
+.pick-container::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 100px;
+}
+
+.pick-container::before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.pick-container::after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.pick-container {
+  display: flex;
+  max-width: 1000px;
+  height: auto;
+  .companies {
+    position: relative;
+    margin-right: 30px;
+    .line {
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      background-color: white;
+      height: 82px;
+      width: 2px;
     }
+    .company-buttons {
+      display: flex;
+      flex-direction: column;
+      border-left: 2px solid $darker-secondary;
+      button {
+        padding: 0 20px 0 20px;
+        height: 42px;
+        width: 200px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        text-align: left;
+        font-size: 1.1rem;
+        margin: 20px 0 20px 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.content-title {
+  p {
+    font-size: 1.3rem;
+    &:last-of-type {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-family: "Courier New", Courier, monospace;
+    }
+  }
+  span {
+    transition: $basic-transition;
+    color: $secondary-color;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }

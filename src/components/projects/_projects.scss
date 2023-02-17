@@ -1,5 +1,5 @@
 .projects-container {
-  margin-top: 200px;
+  margin-top: $section-spacing;
 }
 
 .projects-title {
@@ -53,7 +53,7 @@
   img {
     width: 50%;
     border-radius: 10px;
-    filter: drop-shadow(30px 20px #575757);
+    filter: drop-shadow(30px 20px $secondary-color);
     cursor: pointer;
   }
   p {
@@ -79,7 +79,7 @@
       padding-left: 0px;
     }
     &:hover {
-      color: rgb(121, 121, 121);
+      color: $secondary-color;
     }
   }
 }
