@@ -1239,14 +1239,13 @@ body::-webkit-scrollbar {
 }
 .pick-container .companies .company-buttons button {
   padding: 0 20px 0 20px;
-  height: 42px;
+  height: 82px;
   width: 200px;
   background-color: transparent;
   color: white;
   border: none;
   text-align: left;
   font-size: 1.1rem;
-  margin: 20px 0 20px 0;
   cursor: pointer;
 }
 

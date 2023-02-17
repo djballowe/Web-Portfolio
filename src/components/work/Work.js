@@ -32,7 +32,14 @@ export default function Work({ page }) {
 
   const workButtons = info.map((title, index) => {
     return (
-      <button key={index} id={index} onClick={handleClick}>
+      <button
+        key={index}
+        id={index}
+        onClick={handleClick}
+        style={{
+          backgroundColor: "rgb(20, 20, 20)",
+        }}
+      >
         {title.company}
       </button>
     );
