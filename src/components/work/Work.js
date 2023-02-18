@@ -6,9 +6,10 @@ import Link from "@mdi/react";
 import { mdiLinkVariant } from "@mdi/js";
 import { info } from "../../Docs/Info";
 
-export default function Work({ page }) {
-  const [selectedCompany, setSelectedCompany] = useState(0);
+export default function Work({ page, mobile }) {
+  const [selectedCompany, setSelectedCompany] = useState("0");
   const [lineLocation, setLineLocation] = useState(0);
+  const [fireAnimation, setFireAnimation] = useState(false);
   const selected = info[selectedCompany];
   const triggerOptions = {
     triggerOnce: true,
@@ -21,6 +22,9 @@ export default function Work({ page }) {
     useInView(triggerOptions);
 
   const handleClick = (e) => {
+    if (fireAnimation) {
+      setFireAnimation(false);
+    }
     const { id } = e.target;
     setSelectedCompany(id);
     setLineLocation(id * 82);
@@ -32,18 +36,24 @@ export default function Work({ page }) {
 
   const workButtons = info.map((title, index) => {
     return (
-      <button
-        key={index}
-        id={index}
-        onClick={handleClick}
-        style={{
-          backgroundColor: "rgb(20, 20, 20)",
-        }}
-      >
+      <button key={index} id={index} onClick={handleClick}>
         {title.company}
       </button>
     );
   });
+
+  useEffect(() => {
+    // const textBody = document.getElementsByClassName("content")[0];
+    const buttons = document.querySelector(".company-buttons").children;
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].id === selectedCompany) {
+        buttons[i].style.backgroundColor = "rgb(50, 50, 50)";
+      } else {
+        buttons[i].style.backgroundColor = "rgb(20, 20, 20)";
+      }
+    }
+    setFireAnimation(true)
+  }, [selectedCompany]);
 
   const currentCompanyComponent = () => {
     const bullets = selected.jobDescription.map((info, i) => {
@@ -58,7 +68,7 @@ export default function Work({ page }) {
     });
 
     return (
-      <div className="content">
+      <div className={`content ${fireAnimation ? "opacity-animation" : null}`}>
         <div className="content-title">
           <p>
             {selected.role}{" "}
