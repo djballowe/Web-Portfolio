@@ -43,7 +43,6 @@ export default function Work({ page, mobile }) {
   });
 
   useEffect(() => {
-    // const textBody = document.getElementsByClassName("content")[0];
     const buttons = document.querySelector(".company-buttons").children;
     for (let i = 0; i < buttons.length; i++) {
       if (buttons[i].id === selectedCompany) {
@@ -52,7 +51,7 @@ export default function Work({ page, mobile }) {
         buttons[i].style.backgroundColor = "rgb(20, 20, 20)";
       }
     }
-    setFireAnimation(true)
+    setFireAnimation(true);
   }, [selectedCompany]);
 
   const currentCompanyComponent = () => {

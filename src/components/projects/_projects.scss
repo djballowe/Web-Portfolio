@@ -1,5 +1,5 @@
 .projects-container {
-  margin-top: $section-spacing;
+  margin-top: 100px;
 }
 
 .projects-title {
@@ -113,13 +113,13 @@
 }
 
 .int-animations-fade {
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   animation-fill-mode: forwards;
   transition: all ease-in-out;
 }
 
 .inter-animations {
-  animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   animation-fill-mode: forwards;
   transition: all ease-in-out;
 }
