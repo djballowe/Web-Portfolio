@@ -1,5 +1,5 @@
 .contact-container {
-  margin-top: 200px;
+  margin-top: $section-spacing;
   display: flex;
   flex-direction: column;
   padding-bottom: 250px;
@@ -61,7 +61,7 @@
     transition: all 0.2s ease-in-out;
     color: white;
     &:hover {
-      color: rgb(121, 121, 121);
+      color: $secondary-color;
     }
   }
 }
@@ -72,5 +72,5 @@
   justify-content: center;
   position: absolute;
   bottom: 1%;
-  color: rgb(124, 124, 124);
+  color: $secondary-color;
 }

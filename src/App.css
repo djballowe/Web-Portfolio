@@ -438,7 +438,7 @@ body::-webkit-scrollbar {
 }
 
 .projects-container {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .projects-title {
@@ -491,7 +491,7 @@ body::-webkit-scrollbar {
 .description-container img {
   width: 50%;
   border-radius: 10px;
-  filter: drop-shadow(30px 20px #575757);
+  filter: drop-shadow(30px 20px rgb(121, 121, 121));
   cursor: pointer;
 }
 .description-container p {
@@ -550,13 +550,13 @@ body::-webkit-scrollbar {
 }
 
 .int-animations-fade {
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   animation-fill-mode: forwards;
   transition: all ease-in-out;
 }
 
 .inter-animations {
-  animation: slideIn 1.5s cubic-bezier(0.56, -0.12, 0.31, 1.01);
+  animation: slideIn 1s cubic-bezier(0.56, -0.12, 0.31, 1.01);
   animation-fill-mode: forwards;
   transition: all ease-in-out;
 }
@@ -711,7 +711,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   position: absolute;
   bottom: 1%;
-  color: rgb(124, 124, 124);
+  color: rgb(121, 121, 121);
 }
 
 .icons-sticky {
@@ -1134,9 +1134,15 @@ body::-webkit-scrollbar {
   }
 }
 .work-container {
-  margin-top: 100px;
-  margin-inline: auto;
-  width: min(70%, 100rem);
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1000px;
+}
+
+.work-description-container {
+  margin-top: 50px;
 }
 
 .work-description {
@@ -1147,6 +1153,7 @@ body::-webkit-scrollbar {
   font-size: 5rem;
   height: 100px;
   overflow: hidden;
+  align-self: flex-start;
 }
 
 .work-list-title {
@@ -1166,7 +1173,10 @@ body::-webkit-scrollbar {
 .bullet-container {
   display: flex;
   align-items: flex-start;
-  margin: 15px 0 15px 0;
+  margin: 30px 0 30px 0;
+}
+.bullet-container:last-of-type {
+  margin-bottom: 0px;
 }
 .bullet-container .bullet {
   transform: translateY(-9px);
@@ -1177,5 +1187,198 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 750px) {
   .work-container {
     width: auto;
+  }
+}
+.pick-border-container {
+  position: relative;
+  margin-top: 100px;
+  padding: 60px;
+  opacity: 0;
+}
+
+.pick-container::before,
+.pick-container::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 100px;
+}
+
+.pick-container::before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.pick-container::after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+.pick-container {
+  display: flex;
+  max-width: 1000px;
+  height: auto;
+}
+
+.companies {
+  position: relative;
+  margin-right: 30px;
+}
+.companies .line {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  background-color: white;
+  height: 82px;
+  width: 2px;
+}
+
+.company-buttons {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid rgb(72, 72, 72);
+}
+.company-buttons button {
+  padding: 0 20px 0 20px;
+  height: 82px;
+  width: 200px;
+  background-color: rgb(20, 20, 20);
+  transition: all 0.2s ease-in-out;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.company-buttons button:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.opacity-animation {
+  animation: opacity 0.5s forwards;
+}
+
+.content {
+  opacity: 0;
+}
+
+.content-title p {
+  font-size: 1.3rem;
+}
+.content-title p:last-of-type {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.content-title span {
+  transition: 0.2s all ease-in-out;
+  color: rgb(121, 121, 121);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content-title span:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .pick-container {
+    display: block;
+  }
+  .line {
+    display: none;
+  }
+  .company-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 15px;
+    border-left: none;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .company-buttons button {
+    height: 50px;
+    width: auto;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .pick-border-container {
+    padding: 0px;
+  }
+  .pick-container::before,
+  .pick-container::after {
+    position: static;
+    width: 50px;
+    height: 100px;
+  }
+  .pick-container::before {
+    left: 0;
+    top: 0;
+    border-left: none;
+    border-top: none;
+  }
+  .pick-container::after {
+    right: 0;
+    bottom: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .companies {
+    margin-right: 0px;
+  }
+  .pick-container {
+    display: block;
+  }
+  .line {
+    display: none;
+  }
+  .company-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    border-left: none;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .company-buttons button {
+    height: 50px;
+    width: auto;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .pick-border-container {
+    padding: 0px;
+  }
+  .pick-container::before,
+  .pick-container::after {
+    position: static;
+    width: 50px;
+    height: 100px;
+  }
+  .pick-container::before {
+    left: 0;
+    top: 0;
+    border-left: none;
+    border-top: none;
+  }
+  .pick-container::after {
+    right: 0;
+    bottom: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pick-border-container {
+    margin-top: 30px;
+  }
+  .company-buttons button {
+    font-size: 3.7vw;
   }
 }/*# sourceMappingURL=App.css.map */

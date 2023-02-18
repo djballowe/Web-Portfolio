@@ -14,7 +14,6 @@ function App() {
   const aboutRef = useRef();
   const contactRef = useRef();
   const workRef = useRef();
-
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const handleRef = (location) => {
@@ -39,7 +38,7 @@ function App() {
       <div className="main-content-container">
         <Intro />
         <About page={aboutRef} />
-        <Work page={workRef} />
+        <Work page={workRef} mobile={isMobileOpen} />
         <Projects page={projectsRef} />
         <Contact page={contactRef} />
       </div>

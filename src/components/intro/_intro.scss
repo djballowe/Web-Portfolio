@@ -122,7 +122,7 @@
     animation-fill-mode: forwards;
     transition: all 0.2s ease-in-out;
     &:hover {
-      color: rgb(121, 121, 121);
+      color: $secondary-color;
     }
   }
   svg {
