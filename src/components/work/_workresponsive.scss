@@ -1,0 +1,106 @@
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .pick-container {
+    display: block;
+  }
+  .line {
+    display: none;
+  }
+  .company-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 15px;
+    border-left: none;
+    justify-content: center;
+    margin-bottom: 50px;
+    button {
+      height: 50px;
+      width: auto;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  .pick-border-container {
+    padding: 0px;
+  }
+  .pick-container::before,
+  .pick-container::after {
+    position: static;
+    width: 50px;
+    height: 100px;
+  }
+
+  .pick-container::before {
+    left: 0;
+    top: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  .pick-container::after {
+    right: 0;
+    bottom: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .companies {
+    margin-right: 0px;
+  }
+  .pick-container {
+    display: block;
+  }
+  .line {
+    display: none;
+  }
+  .company-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    border-left: none;
+    justify-content: center;
+    margin-bottom: 50px;
+    button {
+      height: 50px;
+      width: auto;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+  .pick-border-container {
+    padding: 0px;
+  }
+  .pick-container::before,
+  .pick-container::after {
+    position: static;
+    width: 50px;
+    height: 100px;
+  }
+
+  .pick-container::before {
+    left: 0;
+    top: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  .pick-container::after {
+    right: 0;
+    bottom: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pick-border-container {
+    margin-top: 30px;
+  }
+  .company-buttons {
+    button {
+      font-size: 3.7vw;
+    }
+  }
+}

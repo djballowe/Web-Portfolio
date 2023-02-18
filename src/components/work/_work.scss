@@ -89,32 +89,33 @@
   display: flex;
   max-width: 1000px;
   height: auto;
-  .companies {
-    position: relative;
-    margin-right: 30px;
-    .line {
-      transition: all 0.2s ease-in-out;
-      position: absolute;
-      background-color: white;
-      height: 82px;
-      width: 2px;
-    }
-    .company-buttons {
-      display: flex;
-      flex-direction: column;
-      border-left: 2px solid $darker-secondary;
-      button {
-        padding: 0 20px 0 20px;
-        height: 82px;
-        width: 200px;
-        background-color: transparent;
-        color: white;
-        border: none;
-        text-align: left;
-        font-size: 1.1rem;
-        cursor: pointer;
-      }
-    }
+}
+.companies {
+  position: relative;
+  margin-right: 30px;
+  .line {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    background-color: white;
+    height: 82px;
+    width: 2px;
+  }
+}
+
+.company-buttons {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid $darker-secondary;
+  button {
+    padding: 0 20px 0 20px;
+    height: 82px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
   }
 }
 
