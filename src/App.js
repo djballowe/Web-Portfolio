@@ -8,6 +8,7 @@ import { useRef, useState } from "react";
 import MobileMenu from "./components/header/MobileMenu";
 import SideBar from "./components/sidebar/Sidebar";
 import Work from "./components/work/Work";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const projectsRef = useRef();

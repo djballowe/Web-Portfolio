@@ -47,7 +47,7 @@ export const info = [
     jobDescription: [
       "Led the production of marketing content for 300+ clients across the real estate industry including designing listing websites, still imagery, video, and drone services.",
       "Collaborated with the media team to capitalize on market shifts brought on by the COVID pandemic leading to companies highest grossing year in 2021.",
-      "Featured in several publications including luxury home magazine."
+      "Featured in several publications including luxury home magazine.",
     ],
   },
   {
@@ -69,26 +69,43 @@ export const info = [
 
 export const projects = [
   {
-    0: {
-      name: "ZAWN",
-      type: "Full-Stack E-Commerce Site",
-      description:
-        "Full-Stack E-Commerce Site with full functionality. Including adding items to cart, creating user accounts, adding shipping addresses to account, secure checkout with Stripe, and saved order history details per user. Created with React, Node.js/Express, Firebase/Firestore, Stripe API, Cloud Functions, CI/CD configured with Google Cloud, and deployed with Firebase Hosting.",
-      img: "zawnscreen.png",
-    },
-    1: {
-      name: "Mozilla Hubs",
-      type: "Open-Source Contributions",
-      description:
-        "Worked with the Community Manager at Mozilla along with a small team to create a new visual mode for the hubs meeting space. Engineered the logic with React hooks to define a record mode state which toggles a minimal UI designed for camera operators in a hub world to record meetings and events that take place.",
-      img: "hubs.png",
-    },
-    2: {
-      name: "Architecture  Portfolio",
-      type: "Portfolio Site",
-      describe:
-        "Engineered a basic portfolio site for the purpose of displaying freelance and personal projects I have done for architects and interior designers. Made fully responsive with mobile first practices using media queries. Created with React to display each section as a separate component to easily update information. Configured CI/CD pipeline with Vercel for auto deployment. Implemented email.js to gather data from contact form and forward emails.",
-      img: "davidballowe.png",
-    },
+    name: "Neverthink",
+    type: "Production Feature",
+    description:
+      "As a full stack engineer at Live Current Media, I have contributed to the release of several features that have been shipped into enterprise applications. The most significant being a code base for an app called Neverthink that was acquired by Live Current in 2022 and needed to be integrated into their real time video application Kast. This required working with the engineering team to diagnose how to seamlessly integrate neverthink's back-end into our existing Node.js application and AWS architecture. As well as optimizing Kast's streaming functionality to allow streamers and viewers to watch with minimal latency",
+    img: "neverthink.png",
+    id: "neverthink",
+    liveUrl: "https://w.kast.gg",
+    gitHubUrl: null,
+  },
+  {
+    name: "ZAWN",
+    type: "Full-Stack E-Commerce Site",
+    description:
+      "Full-Stack E-Commerce Site with full functionality. Including adding items to cart, creating user accounts, adding shipping addresses to account, secure checkout with Stripe, and saved order history details per user. Created with React, Node.js/Express, Firebase/Firestore, Stripe API, Cloud Functions, CI/CD configured with Google Cloud, and deployed with Firebase Hosting.",
+    img: "zawnscreen.png",
+    id: "zawn",
+    liveUrl: "https://zawnshop.com/",
+    gitHubUrl: "https://github.com/djballowe/ZAWN",
+  },
+  {
+    name: "Mozilla Hubs",
+    type: "Open-Source Contributions",
+    description:
+      "Worked with the Community Manager at Mozilla along with a small team to create a new visual mode for the hubs meeting space. Engineered the logic with React hooks to define a record mode state which toggles a minimal UI designed for camera operators in a hub world to record meetings and events that take place.",
+    img: "hubs.png",
+    id: "mozilla",
+    liveUrl: "https://hubs.mozilla.com/",
+    gitHubUrl: "https://github.com/mozilla/hubs/pull/5718",
+  },
+  {
+    name: "Architecture  Portfolio",
+    type: "Portfolio Site",
+    description:
+      "Engineered a basic portfolio site for the purpose of displaying freelance and personal projects I have done for architects and interior designers. Made fully responsive with mobile first practices using media queries. Created with React to display each section as a separate component to easily update information. Configured CI/CD pipeline with Vercel for auto deployment. Implemented email.js to gather data from contact form and forward emails.",
+    img: "davidballowe.png",
+    id: "arch",
+    liveUrl: "https://www.davidballowe.com/",
+    gitHubUrl: "https://github.com/djballowe/Arch-Portfolio",
   },
 ];

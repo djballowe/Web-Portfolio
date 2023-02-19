@@ -449,7 +449,7 @@ body::-webkit-scrollbar {
 
 .projects-list-container {
   margin-top: 150px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .project-list {
@@ -531,7 +531,6 @@ body::-webkit-scrollbar {
 }
 
 .links-container {
-  position: relative;
   text-align: center;
   margin-right: 15px;
   z-index: 15;
