@@ -43,13 +43,13 @@ export default function About(props) {
           ref={aboutDescriptionRef}
         >
           <p>
-            Hi there! I'm David, a Full Stack Developer with a passion for
-            merging elegant design and technology. I love creating web
-            applications that people can enjoy and use. My goal is to create
-            products that clients are proud of, and to architect clean and
-            scalable code. I also enjoy Photography, making 3d art in Blender,
-            and enjoying the outdoors. Here are a few technologies I have been
-            working with lately.
+            Hi there! I'm David, a highly motivated and experienced full stack
+            engineer with a passion for technology and a talent for creating
+            innovative solutions. I have a diverse background that includes
+            working in start-up environments and delivering cutting-edge
+            projects in both front-end and back-end technologies. With a strong
+            background in React and Node.js as well as many more, I bring a
+            wealth of knowledge to any project.
           </p>
           <div className="about-icons">
             <a
@@ -66,11 +66,7 @@ export default function About(props) {
             >
               <Linkedin path={mdiLinkedin} size={1.5} />
             </a>
-            <a
-              href={PDF}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={PDF} target="_blank" rel="noopener noreferrer">
               <Resume path={mdiFileOutline} size={1.5} />
             </a>
           </div>
@@ -85,8 +81,11 @@ export default function About(props) {
               }
               id="HTML"
             >
-              <img src={require("../../images/Tech/html.png")} alt="" />
-              <p>HTML</p>
+              <img
+                src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png"
+                alt=""
+              />
+              <p>TYPESCRIPT</p>
             </div>
             <div
               className={
@@ -96,8 +95,11 @@ export default function About(props) {
               }
               id="CSS"
             >
-              <img src={require("../../images/Tech/css.png")} alt="" />
-              <p>CSS</p>
+              <img
+                src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png"
+                alt=""
+              />
+              <p>DOCKER</p>
             </div>
             <div
               className={
@@ -118,8 +120,11 @@ export default function About(props) {
               }
               id="express"
             >
-              <img src={require("../../images/Tech/express.png")} alt="" />
-              <p>EXPRESS</p>
+              <img
+                src="https://user-images.githubusercontent.com/25181517/187896150-cc1dcb12-d490-445c-8e4d-1275cd2388d6.png"
+                alt=""
+              />
+              <p>REDUX</p>
             </div>
 
             <div
@@ -186,8 +191,11 @@ export default function About(props) {
               }
               id="python"
             >
-              <img src={require("../../images/Tech/py.png")} alt="" />
-              <p>PYTHON</p>
+              <img
+                src="https://user-images.githubusercontent.com/25181517/183896132-54262f2e-6d98-41e3-8888-e40ab5a17326.png"
+                alt=""
+              />
+              <p>AWS</p>
             </div>
             <div
               className={

@@ -69,12 +69,12 @@ export default function Work({ page, mobile }) {
     return (
       <div className={`content ${fireAnimation ? "opacity-animation" : null}`}>
         <div className="content-title">
-          <p>
-            {selected.role}{" "}
-            <span onClick={() => handleLinkClick(selected.url)}>
+          <div>
+            <p>{selected.role}</p>
+            <div onClick={() => handleLinkClick(selected.url)} className='company-link'>
               @ {selected.company} <Link path={mdiLinkVariant} size={0.7} />
-            </span>
-          </p>
+            </div>
+          </div>
           <p>
             {selected.startDate.month} {selected.startDate.year} -{" "}
             {selected.endDate.month

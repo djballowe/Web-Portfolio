@@ -136,13 +136,15 @@
 .content-title {
   p {
     font-size: 1.3rem;
-    &:last-of-type {
+    &:nth-child(2) {
       margin-top: 10px;
       font-size: 1rem;
       font-family: "Courier New", Courier, monospace;
     }
   }
-  span {
+  .company-link {
+    margin-left: 5px;
+    font-size: 1.3rem;
     transition: $basic-transition;
     color: $secondary-color;
     border-radius: 5px;
@@ -151,5 +153,10 @@
       color: white;
       text-decoration: underline;
     }
+  }
+  div {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
   }
 }
