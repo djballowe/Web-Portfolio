@@ -4,12 +4,17 @@ import GitHub from "@mdi/react";
 import { mdiGithub } from "@mdi/js";
 import Link from "@mdi/react";
 import { mdiOpenInNew } from "@mdi/js";
+import { projects } from "../../Docs/Info";
+import { Tooltip } from "reactstrap";
 
 export default function Projects(props) {
-  const links = {
-    zawn: "https://zawnshop.com/",
-    mozilla: "https://hubs.mozilla.com/",
-    arch: "https://www.davidballowe.com/",
+  const links = {};
+  projects.map((project) => {
+    links[project.id] = project.liveUrl;
+  });
+
+  const handleClick = (e) => {
+    window.open(links[e.target.id], "_blank");
   };
 
   const triggerOptions = {
@@ -19,15 +24,89 @@ export default function Projects(props) {
 
   const { ref: projectRef, inView: projectVisible } = useInView(triggerOptions);
 
-  const { ref: projectOne, inView: projectOneVisible } = useInView(triggerOptions);
+  const { ref: projectOne, inView: projectOneVisible } =
+    useInView(triggerOptions);
 
-  const { ref: projectTwo, inView: projectTwoVisible } = useInView(triggerOptions);
+  const { ref: projectTwo, inView: projectTwoVisible } =
+    useInView(triggerOptions);
 
-  const { ref: projectThree, inView: projectThreeVisible } = useInView(triggerOptions);
+  const { ref: projectThree, inView: projectThreeVisible } =
+    useInView(triggerOptions);
 
-  const handleClick = (e) => {
-    window.open(links[e.target.id], "_blank");
-  };
+  const projectsList = projects.map((project, i) => {
+    return (
+      <div
+        key={i}
+        className="projects-list-container"
+        // className={
+        //   projectOneVisible
+        //     ? "int-animations-fade projects-list-container"
+        //     : "projects-list-container"
+        // }
+        // ref={projectOne}
+      >
+        <div>
+          <div className="projects-list-title">
+            <p>{project.name}</p>
+            <p>{project.type}</p>
+          </div>
+          <div
+            className="description-container"
+            id={`${project.id}`}
+            style={{
+              flexDirection: i % 2 === 0 ? "" : "row-reverse",
+            }}
+          >
+            <div className="description">
+              <p>{project.description}</p>
+              <div className="project-buttons">
+                <div className="links-container">
+                  <a
+                    href={`${project.liveUrl}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    id={`${project.id}-live`}
+                  >
+                    <Link path={mdiOpenInNew} size={1.3} />
+                  </a>
+                </div>
+                <div className="links-container-code">
+                  {project.gitHubUrl ? (
+                    <a
+                      style={{
+                        color: !project.gitHubUrl ? "rgb(121, 121, 121)" : "",
+                      }}
+                      href={`${project.gitHubUrl}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      id={`${project.id}-github`}
+                    >
+                      {/* {!project.gitHubUrl ? (
+                      <Tooltip
+                        placement={"top"}
+                        isOpen={true}
+                        target={`${project.id}-github`}
+                      >
+                        Code base is a private repository
+                      </Tooltip>
+                    ) : null} */}
+                      <GitHub path={mdiGithub} size={1.5} />
+                    </a>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+            <img
+              src={require(`../../images/${project.img}`)}
+              alt=""
+              onClick={handleClick}
+              id={`${project.id}`}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <div className="projects-container" ref={props.page}>
@@ -42,168 +121,7 @@ export default function Projects(props) {
           Projects.
         </p>
       </div>
-      <div
-        className={
-          projectOneVisible
-            ? "int-animations-fade projects-list-container"
-            : "projects-list-container"
-        }
-        ref={projectOne}
-      >
-        <div>
-          <div className="projects-list-title">
-            <p>ZAWN</p>
-            <p>Full-Stack E-Commerce Site</p>
-          </div>
-          <div className="description-container" id="zawn">
-            <div className="description">
-              <p>
-                Full-Stack E-Commerce Site with full functionality. Including
-                adding items to cart, creating user accounts, adding shipping
-                addresses to account, secure checkout with Stripe, and saved
-                order history details per user. Created with React,
-                Node.js/Express, Firebase/Firestore, Stripe API, Cloud
-                Functions, CI/CD configured with Google Cloud, and deployed with
-                Firebase Hosting.
-              </p>
-              <div className="project-buttons">
-                <div className="links-container">
-                  <a
-                    href="https://zawnshop.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    id="zawn-live"
-                  >
-                    <Link path={mdiOpenInNew} size={1.3} />
-                  </a>
-                </div>
-                <div className="links-container-code">
-                  <a
-                    href="https://github.com/djballowe/ZAWN"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <GitHub path={mdiGithub} size={1.5} />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <img
-              src={require("../../images/zawnscreen.png")}
-              alt=""
-              onClick={handleClick}
-              id="zawn"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className={
-          projectTwoVisible
-            ? "int-animations-fade projects-list-container"
-            : "projects-list-container"
-        }
-        ref={projectTwo}
-      >
-        <div className="projects-list">
-          <div className="projects-list-title-even">
-            <p>Mozilla Hubs</p>
-            <p>Open-Source Contributions</p>
-          </div>
-          <div className="description-container">
-            <img
-              src={require("../../images/hubs.png")}
-              alt=""
-              onClick={handleClick}
-              id="mozilla"
-            />
-            <div className="description">
-              <p>
-                Worked with the Community Manager at Mozilla along with a small
-                team to create a new visual mode for the hubs meeting space.
-                Engineered the logic with React hooks to define a record mode
-                state which toggles a minimal UI designed for "camera operators"
-                in a hub world to record meetings and events that take place.
-              </p>
-              <div className="project-buttons">
-                <div className="links-container">
-                  <a
-                    href="https://hubs.mozilla.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Link path={mdiOpenInNew} size={1.3} />
-                  </a>
-                </div>
-                <div className="links-container-code">
-                  <a
-                    href="https://github.com/mozilla/hubs/pull/5718"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <GitHub path={mdiGithub} size={1.5} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={
-          projectThreeVisible
-            ? "int-animations-fade projects-list-container"
-            : "projects-list-container"
-        }
-        ref={projectThree}
-      >
-        <div className="projects-list">
-          <div className="projects-list-title">
-            <p>Architecture Portfolio</p>
-            <p>Portfolio Site</p>
-          </div>
-          <div className="description-container" id="arch">
-            <div className="description">
-              <p>
-                Engineered a basic portfolio site for the purpose of displaying
-                freelance and personal projects I have done for architects and
-                interior designers. Made fully responsive with mobile first
-                practices using media queries. Created with React to display
-                each section as a separate component to easily update
-                information. Configured CI/CD pipeline with Vercel for auto
-                deployment. Implemented email.js to gather data from contact
-                form and forward emails.
-              </p>
-              <div className="project-buttons">
-                <div className="links-container">
-                  <a
-                    href="https://www.davidballowe.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Link path={mdiOpenInNew} size={1.3} />
-                  </a>
-                </div>
-                <div className="links-container-code">
-                  <a
-                    href="https://github.com/djballowe/Arch-Portfolio"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <GitHub path={mdiGithub} size={1.5} />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <img
-              src={require("../../images/davidballowe.png")}
-              alt=""
-              onClick={handleClick}
-              id="arch"
-            />
-          </div>
-        </div>
-      </div>
+      {projectsList}
     </div>
   );
 }

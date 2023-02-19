@@ -30,6 +30,13 @@ export default function MobileMenu(props) {
         </li>
         <li
           onClick={() => {
+            props.handle("work");
+          }}
+        >
+          Work.
+        </li>
+        <li
+          onClick={() => {
             props.handle("contact");
           }}
         >
