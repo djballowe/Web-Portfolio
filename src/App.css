@@ -489,10 +489,16 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 .description-container img {
+  transition: all 0.2s ease-in-out;
   width: 50%;
   border-radius: 10px;
   filter: drop-shadow(30px 20px rgb(121, 121, 121));
   cursor: pointer;
+}
+.description-container img:hover {
+  filter: drop-shadow(40px 30px rgb(121, 121, 121));
+  transform: translateY(-5px);
+  transform: translateX(-5px);
 }
 .description-container p {
   padding: 10px 20px;

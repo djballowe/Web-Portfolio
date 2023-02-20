@@ -51,10 +51,16 @@
   align-items: center;
   width: 100%;
   img {
+    transition: all .2s ease-in-out;
     width: 50%;
     border-radius: 10px;
     filter: drop-shadow(30px 20px $secondary-color);
     cursor: pointer;
+    &:hover {
+      filter: drop-shadow(40px 30px $secondary-color);
+      transform: translateY(-5px);
+      transform: translateX(-5px);
+    }
   }
   p {
     padding: 10px 20px;
