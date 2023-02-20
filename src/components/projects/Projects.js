@@ -6,6 +6,8 @@ import Link from "@mdi/react";
 import { mdiOpenInNew } from "@mdi/js";
 import { projects } from "../../Docs/Info";
 import { Tooltip } from "reactstrap";
+import Video from "@mdi/react";
+import { mdiVideoOutline } from "@mdi/js";
 
 export default function Projects(props) {
   const links = {};
@@ -53,9 +55,9 @@ export default function Projects(props) {
           <div
             className="description-container"
             id={`${project.id}`}
-            style={{
-              flexDirection: i % 2 === 0 ? "" : "row-reverse",
-            }}
+            // style={{
+            //   flexDirection: i % 2 === 0 ? "" : "row-reverse",
+            // }}
           >
             <div className="description">
               <p>{project.description}</p>
@@ -81,16 +83,17 @@ export default function Projects(props) {
                       rel="noreferrer"
                       id={`${project.id}-github`}
                     >
-                      {/* {!project.gitHubUrl ? (
-                      <Tooltip
-                        placement={"top"}
-                        isOpen={true}
-                        target={`${project.id}-github`}
-                      >
-                        Code base is a private repository
-                      </Tooltip>
-                    ) : null} */}
                       <GitHub path={mdiGithub} size={1.5} />
+                    </a>
+                  ) : null}
+                  {project.demo ? (
+                    <a
+                      href={`${project.demo}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      id={`${project.id}-demo`}
+                    >
+                      <Video path={mdiVideoOutline} size={1.5} />
                     </a>
                   ) : null}
                 </div>

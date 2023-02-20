@@ -72,11 +72,12 @@ export const projects = [
     name: "Neverthink",
     type: "Production Feature",
     description:
-      "As a full stack engineer at Live Current Media, I have contributed to the release of several features that have been shipped into enterprise applications. The most significant being a code base for an app called Neverthink that was acquired by Live Current in 2022 and needed to be integrated into their real time video application Kast. This required working with the engineering team to diagnose how to seamlessly integrate neverthink's back-end into our existing Node.js application and AWS architecture. As well as optimizing Kast's streaming functionality to allow streamers and viewers to watch with minimal latency",
+      "As a full stack engineer at Live Current Media, I have contributed to the release of several features that have been shipped into enterprise applications. The most significant being a code base for an app called Neverthink that was acquired by Live Current in 2022 and needed to be integrated into their real time video application Kast. This required working with the engineering team to diagnose how to seamlessly integrate neverthink's back-end into our existing Node.js application and AWS architecture. As well as optimizing Kast's streaming functionality to allow streamers and viewers to watch with minimal latency.",
     img: "neverthink.png",
     id: "neverthink",
-    liveUrl: "https://w.kast.gg",
+    liveUrl: "https://www.livecurrent.com/post/neverthink-is-back",
     gitHubUrl: null,
+    demo: "https://www.youtube.com/watch?v=zj8SumzjOB8&ab_channel=Kast",
   },
   {
     name: "ZAWN",
@@ -87,6 +88,7 @@ export const projects = [
     id: "zawn",
     liveUrl: "https://zawnshop.com/",
     gitHubUrl: "https://github.com/djballowe/ZAWN",
+    demo: null,
   },
   {
     name: "Mozilla Hubs",
@@ -97,6 +99,7 @@ export const projects = [
     id: "mozilla",
     liveUrl: "https://hubs.mozilla.com/",
     gitHubUrl: "https://github.com/mozilla/hubs/pull/5718",
+    demo: null,
   },
   {
     name: "Architecture  Portfolio",
@@ -107,5 +110,6 @@ export const projects = [
     id: "arch",
     liveUrl: "https://www.davidballowe.com/",
     gitHubUrl: "https://github.com/djballowe/Arch-Portfolio",
+    demo: null,
   },
 ];
