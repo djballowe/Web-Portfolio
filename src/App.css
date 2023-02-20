@@ -972,7 +972,9 @@ body::-webkit-scrollbar {
     font-size: 1.2rem;
   }
   #zawn,
-  #arch {
+  #arch,
+  #neverthink,
+  #mozilla {
     flex-direction: column-reverse;
   }
   .projects-list-container {
