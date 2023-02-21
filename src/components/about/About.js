@@ -49,7 +49,16 @@ export default function About(props) {
             working in start-up environments and delivering cutting-edge
             projects in both front-end and back-end technologies. With a strong
             background in React and Node.js as well as many more, I bring a
-            wealth of knowledge to any project.
+            wealth of knowledge to any project. Want to know more about my
+            story? Here's an{" "}
+            <a
+              href="https://hackernoon.com/from-media-production-lead-to-full-stack-engineer-in-six-months"
+              target="_blank"
+              rel="noreferrer"
+            >
+              article
+            </a>{" "}
+            written by a friend and fellow engineer about my journey.
           </p>
           <div className="about-icons">
             <a

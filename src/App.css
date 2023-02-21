@@ -599,6 +599,13 @@ body::-webkit-scrollbar {
   padding: 20px;
   line-height: 150%;
 }
+.about-description a {
+  transition: all 0.2s ease-in-out;
+  color: rgb(121, 121, 121);
+}
+.about-description a:hover {
+  color: white;
+}
 
 .about-icons {
   padding: 0 0 20px 20px;
