@@ -506,6 +506,10 @@ body::-webkit-scrollbar {
   font-size: 1.1vw;
 }
 
+.description-container-reversed {
+  flex-direction: row-reverse;
+}
+
 .project-buttons {
   display: flex;
   align-items: center;
@@ -545,8 +549,10 @@ body::-webkit-scrollbar {
 .links-container-code {
   position: relative;
   text-align: center;
-  margin-right: 40px;
   z-index: 15;
+}
+.links-container-code svg {
+  margin-right: 15px;
 }
 
 .description {
@@ -962,7 +968,6 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 1000px) {
   .description-container {
     margin-top: 20px;
-    flex-direction: column;
     align-items: center;
   }
   .description-container img {
@@ -976,6 +981,9 @@ body::-webkit-scrollbar {
   }
   .description p {
     font-size: 1.2rem;
+  }
+  .description-container-reversed {
+    flex-direction: row;
   }
   #zawn,
   #arch,

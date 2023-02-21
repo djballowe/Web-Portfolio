@@ -78,6 +78,20 @@ export const projects = [
     liveUrl: "https://www.livecurrent.com/post/neverthink-is-back",
     gitHubUrl: null,
     demo: "https://www.youtube.com/watch?v=zj8SumzjOB8&ab_channel=Kast",
+    publication: null,
+  },
+  {
+    name: "Mozilla Hubs",
+    type: "Open-Source Contributions",
+    description:
+      "Worked with the Community Manager at Mozilla along with a small team to create a new visual mode for the hubs meeting space. Engineered the logic with React hooks to define a record mode state which toggles a minimal UI designed for camera operators in a hub world to record meetings and events that take place. Read more about our project in the article linked below.",
+    img: "hubs.png",
+    id: "mozilla",
+    liveUrl: "https://hubs.mozilla.com/",
+    gitHubUrl: "https://github.com/mozilla/hubs/pull/5718",
+    demo: null,
+    publication:
+      "https://hubs.mozilla.com/labs/best-screen-capture-tips-for-mozilla-hubs/",
   },
   {
     name: "ZAWN",
@@ -89,17 +103,7 @@ export const projects = [
     liveUrl: "https://zawnshop.com/",
     gitHubUrl: "https://github.com/djballowe/ZAWN",
     demo: null,
-  },
-  {
-    name: "Mozilla Hubs",
-    type: "Open-Source Contributions",
-    description:
-      "Worked with the Community Manager at Mozilla along with a small team to create a new visual mode for the hubs meeting space. Engineered the logic with React hooks to define a record mode state which toggles a minimal UI designed for camera operators in a hub world to record meetings and events that take place.",
-    img: "hubs.png",
-    id: "mozilla",
-    liveUrl: "https://hubs.mozilla.com/",
-    gitHubUrl: "https://github.com/mozilla/hubs/pull/5718",
-    demo: null,
+    publication: null,
   },
   {
     name: "Architecture  Portfolio",
@@ -111,5 +115,6 @@ export const projects = [
     liveUrl: "https://www.davidballowe.com/",
     gitHubUrl: "https://github.com/djballowe/Arch-Portfolio",
     demo: null,
+    publication: null,
   },
 ];

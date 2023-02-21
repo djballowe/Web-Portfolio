@@ -51,7 +51,7 @@
   align-items: center;
   width: 100%;
   img {
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     width: 50%;
     border-radius: 10px;
     filter: drop-shadow(30px 20px $secondary-color);
@@ -67,6 +67,10 @@
     line-height: 150%;
     font-size: 1.1vw;
   }
+}
+
+.description-container-reversed {
+  flex-direction: row-reverse;
 }
 
 .project-buttons {
@@ -108,8 +112,10 @@
 .links-container-code {
   position: relative;
   text-align: center;
-  margin-right: 40px;
   z-index: 15;
+  svg {
+    margin-right: 15px;
+  }
 }
 
 .description {
