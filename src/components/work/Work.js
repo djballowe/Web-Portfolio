@@ -22,10 +22,14 @@ export default function Work({ page, mobile }) {
     useInView(triggerOptions);
 
   const handleClick = (e) => {
+    const { id } = e.target;
+    if (id === selectedCompany) {
+      return;
+    }
     if (fireAnimation) {
       setFireAnimation(false);
     }
-    const { id } = e.target;
+
     setSelectedCompany(id);
     setLineLocation(id * 82);
   };
@@ -71,7 +75,10 @@ export default function Work({ page, mobile }) {
         <div className="content-title">
           <div>
             <p>{selected.role}</p>
-            <div onClick={() => handleLinkClick(selected.url)} className='company-link'>
+            <div
+              onClick={() => handleLinkClick(selected.url)}
+              className="company-link"
+            >
               @ {selected.company} <Link path={mdiLinkVariant} size={0.7} />
             </div>
           </div>
