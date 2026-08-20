@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  socialImage?: string | null;
+  type?: "website" | "article";
+}
+
+const {
+  title = "David Ballowe — Backend Engineer",
+  description = "David Ballowe is a backend engineer with cloud experience, a love of the terminal, and an interest in dependable systems.",
+  socialImage = "/og-monochrome.png",
+  type = "website",
+} = Astro.props;
+
+const socialImageUrl = socialImage
+  ? new URL(socialImage, Astro.site ?? Astro.url.origin)
+  : null;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#060907" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={Astro.url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+    {socialImageUrl && <meta property="og:image" content={socialImageUrl} />}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {socialImageUrl && <meta name="twitter:image" content={socialImageUrl} />}
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="David Ballowe, home"><span>david@web</span>:~$</a>
+        <nav aria-label="Primary navigation">
+          <a href="/">./home</a>
+          <a href="/blog/">./writing</a>
+          <a href="mailto:db@davidballowe.com">./email</a>
+        </nav>
+      </header>
+      <slot />
+      <footer class="site-footer">
+        <p><span>david@web</span>:~$ <b aria-hidden="true">_</b></p>
+        <p>© {new Date().getFullYear()} David Ballowe</p>
+      </footer>
+    </div>
+  </body>
+</html>
