@@ -1,0 +1,44 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  updatedAt?: Date;
+}
+
+const { title, description, publishedAt, updatedAt } = Astro.props;
+const dateFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+---
+
+<BaseLayout
+  title={`${title} — David Ballowe`}
+  description={description}
+  socialImage={null}
+  type="article"
+>
+  <main id="main-content">
+    <article class="article">
+      <a class="back-link" href="/blog/"><span aria-hidden="true">cd</span> ../writing</a>
+      <header class="article-header">
+        <p class="command"><span aria-hidden="true">$</span> cat ./post.md</p>
+        <h1>{title}</h1>
+        <p class="article-description">{description}</p>
+        <p class="article-date">
+          <time datetime={publishedAt.toISOString()}>{dateFormatter.format(publishedAt)}</time>
+          {updatedAt && (
+            <> · Updated <time datetime={updatedAt.toISOString()}>{dateFormatter.format(updatedAt)}</time></>
+          )}
+        </p>
+      </header>
+      <div class="article-body">
+        <slot />
+      </div>
+    </article>
+  </main>
+</BaseLayout>

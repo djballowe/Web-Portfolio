@@ -1,0 +1,19 @@
+packages:
+  - "."
+
+minimumReleaseAge: 10080
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 43200
+trustLockfile: false
+blockExoticSubdeps: true
+verifyStoreIntegrity: true
+strictStorePkgContentCheck: true
+strictDepBuilds: true
+
+audit:
+  level: moderate
+
+allowBuilds:
+  esbuild: true
