@@ -1,7 +1,7 @@
 packages:
   - "."
 
-minimumReleaseAge: 1440
+minimumReleaseAge: 10080
 minimumReleaseAgeStrict: true
 minimumReleaseAgeIgnoreMissingTime: false
 trustPolicy: no-downgrade
