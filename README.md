@@ -5,7 +5,7 @@ and ships no client-side JavaScript by default.
 
 ## Local development
 
-Requires Node.js 24 and pnpm 11.19.
+Requires Node.js 24 and pnpm 10.34.5.
 
 ```sh
 pnpm install --frozen-lockfile
@@ -41,4 +41,3 @@ from the site.
 The production site is [davidballowe.me](https://davidballowe.me/). A connected
 Vercel project can build and deploy this static Astro project automatically from
 the `main` branch.
-
