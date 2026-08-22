@@ -247,7 +247,6 @@ h3 {
   text-decoration: underline;
 }
 
-.all-writing,
 .back-link {
   display: inline-block;
   margin-top: 1.5rem;
@@ -255,25 +254,6 @@ h3 {
   font-size: 0.82rem;
 }
 
-.blog-index {
-  min-height: 70vh;
-  padding-block: 4.5rem 6rem;
-}
-
-.page-header {
-  padding-bottom: 2rem;
-}
-
-.page-header .command:last-child {
-  margin-top: 3.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.page-header .command-output {
-  margin-bottom: 0;
-}
-
-.page-header .command-output p,
 .article-description {
   color: var(--muted);
 }
@@ -413,8 +393,7 @@ h3 {
     gap: 0.3rem 1rem;
   }
 
-  .intro,
-  .blog-index {
+  .intro {
     padding-block: 3.5rem 5rem;
   }
 
