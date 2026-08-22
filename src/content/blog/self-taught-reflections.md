@@ -95,9 +95,9 @@ your learning. Use AI to help you understand these concepts and accelerate your 
 
 For projects, I would tackle something like:
 
-- a compiler,
-- a small operating system, or
-- a small database.
+- a compiler
+- a small operating system
+- a small database
 
 Each of these will teach you low-level concepts used in the high-level abstractions we have today.
 We really do stand on the shoulders of giants in the tech world, and **you need to understand why**.
@@ -118,6 +118,6 @@ job market, they'll think about the people they already know and trust to fill t
 **Step 3: Repeat until you win.**
 
 You're in it for the long haul. It could take months; it could take years. But repeating those two
-steps and showing up every day—even if it's only for a little while—will move the needle. The golden
-era of the self-taught path is over, but it's still possible. Just don't waste your time spinning
-your wheels on advice that is out of touch with the reality of the times.
+steps and showing up every day, even if it's only for a small amount, will move the needle. The
+golden era of the self-taught path is over, but it's still possible. Just don't waste your time
+spinning your wheels on advice that is out of touch with the reality of the times.

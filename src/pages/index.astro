@@ -6,50 +6,64 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 4);
 
-const formatDate = (date: Date) => date.toISOString().slice(0, 10).replaceAll("-", ".");
+const formatDate = (date: Date) =>
+  date.toISOString().slice(0, 10).replaceAll("-", ".");
 ---
 
 <BaseLayout>
   <main id="main-content">
     <section class="intro" aria-labelledby="intro-heading">
-      <p class="command"><span aria-hidden="true">$</span> whoami</p>
       <div class="command-output">
         <h1 id="intro-heading">David Ballowe</h1>
         <p class="role">backend_engineer // terminal_lover</p>
         <p>
           Hi I'm David. Backend engineer by trade but a builder at heart.
-          Whether its in the cloud or physical devices. Here you'll find my musings about
-          what I am working on, the latest tech, and maybe some movie reviews here and there
+          Whether its in the cloud or physical devices. Here you'll find my
+          musings about what I am working on, the latest tech, and maybe some
+          movie reviews here and there
         </p>
       </div>
 
-      <p class="command"><span aria-hidden="true">$</span> ls ./links</p>
+      <p class="command"><span aria-hidden="true">$</span>links</p>
       <ul class="profile-links" aria-label="David Ballowe online">
         <li><a href="mailto:db@davidballowe.com">email</a></li>
-        <li><a href="https://github.com/djballowe" rel="me noreferrer" target="_blank">github</a></li>
-        <li><a href="https://www.linkedin.com/in/david-ballowe-90a164178/" rel="me noreferrer" target="_blank">linkedin</a></li>
+        <li>
+          <a
+            href="https://github.com/djballowe"
+            rel="me noreferrer"
+            target="_blank">github</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/david-ballowe-90a164178/"
+            rel="me noreferrer"
+            target="_blank">linkedin</a
+          >
+        </li>
       </ul>
     </section>
 
     <section class="writing" id="writing" aria-labelledby="writing-heading">
-      <p class="command"><span aria-hidden="true">$</span> ls -lt ./writing | head</p>
+      <p class="command"><span aria-hidden="true">$</span>writing</p>
       <h2 class="visually-hidden" id="writing-heading">Recent writing</h2>
       <ol class="post-list">
-        {posts.map((post) => (
-          <li>
-            <a class="post-link" href={`/blog/${post.id}/`}>
-              <time datetime={post.data.publishedAt.toISOString()}>
-                {formatDate(post.data.publishedAt)}
-              </time>
-              <span>
-                <strong>{post.data.title}</strong>
-                <small>{post.data.description}</small>
-              </span>
-            </a>
-          </li>
-        ))}
+        {
+          posts.map((post) => (
+            <li>
+              <a class="post-link" href={`/blog/${post.id}/`}>
+                <time datetime={post.data.publishedAt.toISOString()}>
+                  {formatDate(post.data.publishedAt)}
+                </time>
+                <span>
+                  <strong>{post.data.title}</strong>
+                  <small>{post.data.description}</small>
+                </span>
+              </a>
+            </li>
+          ))
+        }
       </ol>
-      <a class="all-writing" href="/blog/">./writing/archive <span aria-hidden="true">→</span></a>
     </section>
   </main>
 </BaseLayout>
