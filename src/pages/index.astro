@@ -14,17 +14,15 @@ const formatDate = (date: Date) =>
   <main id="main-content">
     <section class="intro" aria-labelledby="intro-heading">
       <div class="command-output">
-        <h1 id="intro-heading">David Ballowe</h1>
-        <p class="role">backend_engineer // terminal_lover</p>
+        <h1 id="intro-heading">David Ballowe.</h1>
+        <p class="role">Software engineer by trade. Builder at heart.</p>
         <p>
-          Hi I'm David. Backend engineer by trade but a builder at heart.
-          Whether its in the cloud or physical devices. Here you'll find my
-          musings about what I am working on, the latest tech, and maybe some
-          movie reviews here and there
+          Currently building the future of energy infrastructure at Torus and
+          tinkering with my home lab. Sometimes I write about tech, career, and
+          things I find interesting.
         </p>
       </div>
 
-      <p class="command"><span aria-hidden="true">$</span>links</p>
       <ul class="profile-links" aria-label="David Ballowe online">
         <li><a href="mailto:db@davidballowe.com">email</a></li>
         <li>
@@ -41,12 +39,18 @@ const formatDate = (date: Date) =>
             target="_blank">linkedin</a
           >
         </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/david-ballowe-90a164178/"
+            rel="me noreferrer"
+            target="_blank">about</a
+          >
+        </li>
       </ul>
     </section>
 
     <section class="writing" id="writing" aria-labelledby="writing-heading">
-      <p class="command"><span aria-hidden="true">$</span>writing</p>
-      <h2 class="visually-hidden" id="writing-heading">Recent writing</h2>
+      <h2 class="section-heading" id="writing-heading">recent_posts</h2>
       <ol class="post-list">
         {
           posts.map((post) => (
@@ -67,3 +71,124 @@ const formatDate = (date: Date) =>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .intro {
+    padding-block: 1.75rem;
+  }
+
+  .command-output {
+    max-width: 42rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .role {
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .command-output p:not(.role) {
+    max-width: 40rem;
+    margin-bottom: 0;
+  }
+
+  .profile-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem 2rem;
+    max-width: 32rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .profile-links li::before {
+    margin-right: 0.65rem;
+    color: var(--muted);
+    content: "->";
+  }
+
+  .profile-links a {
+    color: var(--accent);
+  }
+
+  .writing {
+    padding-block: 1.75rem;
+    border-top: 1px dashed var(--line);
+  }
+
+  .section-heading {
+    margin: 0 0 1rem;
+    color: var(--accent);
+    font-size: 0.9rem;
+  }
+
+  .post-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .post-link {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1.5rem;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+
+  .post-link time {
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .post-link strong,
+  .post-link small {
+    display: block;
+  }
+
+  .post-link strong {
+    color: var(--text);
+    font-size: 0.94rem;
+    font-weight: 400;
+  }
+
+  .post-link strong::before {
+    margin-right: 0.6rem;
+    color: var(--accent);
+    content: "./";
+  }
+
+  .post-link small {
+    margin-top: 0.25rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .post-link:hover strong {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 40rem) {
+    .intro {
+      padding-block: 1.5rem 1.75rem;
+    }
+
+    .profile-links {
+      grid-template-columns: 1fr;
+    }
+
+    .writing {
+      padding-block: 1.5rem 1.75rem;
+    }
+
+    .post-link {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+  }
+</style>

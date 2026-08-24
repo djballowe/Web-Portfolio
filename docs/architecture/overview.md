@@ -53,13 +53,13 @@ src/content.config.ts -- validates post metadata
 | Path                           | Responsibility                                                 |
 | ------------------------------ | -------------------------------------------------------------- |
 | `src/pages/`                   | File-based routes and build-time page composition              |
-| `src/pages/index.astro`        | Homepage, profile links, and recent writing                    |
+| `src/pages/index.astro`        | Homepage, recent writing, and their scoped styles              |
 | `src/pages/blog/[...id].astro` | Static route generation for published posts                    |
 | `src/content/blog/`            | Markdown and optional MDX source files for posts               |
 | `src/content.config.ts`        | Blog collection loader and frontmatter schema                  |
-| `src/layouts/BaseLayout.astro` | Shared document shell, metadata, navigation, and footer        |
-| `src/layouts/PostLayout.astro` | Shared article structure and dates                             |
-| `src/styles/global.css`        | The visual system and responsive behavior; no CSS framework    |
+| `src/layouts/BaseLayout.astro` | Shared shell, metadata, navigation, footer, and layout styles  |
+| `src/layouts/PostLayout.astro` | Shared article structure, dates, and scoped article styles     |
+| `src/styles/global.css`        | Design tokens, reset, base typography, and shared interactions |
 | `public/`                      | Files served unchanged, including the favicon and social image |
 | `astro.config.mjs`             | Canonical site URL, static output, and Markdown processor      |
 | `pnpm-workspace.yaml`          | Workspace declaration and dependency-security policy           |
@@ -78,6 +78,12 @@ src/content.config.ts -- validates post metadata
   source, build inputs, and validation—not a second deployment pipeline.
 - Dependency versions and the package manager are intentionally controlled. Do not loosen the
   policies in `pnpm-workspace.yaml` merely to make a new release install immediately.
+- CSS belongs with the Astro page or layout that owns the markup. Keep `global.css` limited to
+  cross-route foundations, and use `:global()` only where a scoped layout must style rendered
+  Markdown descendants.
+- Preserve the restrained developer aesthetic without rebuilding a simulated terminal. Monospace
+  typography, the green accent, and simple line treatments are intentional; command prompts, cursor
+  effects, and decorative terminal chrome are not defaults.
 
 ## Common change flows
 
@@ -97,6 +103,18 @@ src/content.config.ts -- validates post metadata
    replaces them.
 3. Update this overview when responsibilities move between files.
 4. Add a decision record when the change introduces or reverses a durable convention.
+
+### Change styling
+
+1. Put site-wide tokens, resets, base element styles, and shared interaction states in
+   `src/styles/global.css`.
+2. Put shell, homepage, and article rules in the scoped `<style>` block beside the markup that owns
+   them.
+3. For Markdown rendered through the article slot, keep the owning `.article-body` selector scoped
+   and mark only the generated descendants with Astro's `:global()` syntax.
+4. Preserve the minimal, text-first visual language and spacing rhythm unless a deliberate redesign
+   replaces it.
+5. Run `pnpm build` before merging.
 
 ## Deliberate omissions
 
