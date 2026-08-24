@@ -1,3 +1,3 @@
-Personal blog site made with Astro 
+Personal blog site made with Astro. 
 
-[davidballowe.me](https://davidballowe.me/).
+[davidballowe.me](https://davidballowe.me/)
