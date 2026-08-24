@@ -11,14 +11,16 @@ An agent joining the project should read these documents in this order:
 
 ## Decision index
 
-| ID                                                           | Decision                                         | Status   |
-| ------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| [0001](decisions/0001-use-astro-for-a-static-site.md)        | Use Astro for a static, JavaScript-optional site | Accepted |
-| [0002](decisions/0002-store-posts-in-content-collections.md) | Store posts in validated content collections     | Accepted |
-| [0003](decisions/0003-list-writing-on-the-homepage.md)       | List recent writing on the homepage              | Accepted |
-| [0004](decisions/0004-pin-and-harden-the-node-toolchain.md)  | Pin and harden the Node and pnpm toolchain       | Accepted |
-| [0005](decisions/0005-let-vercel-own-deployment.md)          | Let Vercel own preview and production deployment | Accepted |
-| [0006](decisions/0006-remove-the-legacy-react-stack.md)      | Remove the legacy React and Sass stack           | Accepted |
+| ID                                                             | Decision                                         | Status   |
+| -------------------------------------------------------------- | ------------------------------------------------ | -------- |
+| [0001](decisions/0001-use-astro-for-a-static-site.md)          | Use Astro for a static, JavaScript-optional site | Accepted |
+| [0002](decisions/0002-store-posts-in-content-collections.md)   | Store posts in validated content collections     | Accepted |
+| [0003](decisions/0003-list-writing-on-the-homepage.md)         | List recent writing on the homepage              | Accepted |
+| [0004](decisions/0004-pin-and-harden-the-node-toolchain.md)    | Pin and harden the Node and pnpm toolchain       | Accepted |
+| [0005](decisions/0005-let-vercel-own-deployment.md)            | Let Vercel own preview and production deployment | Accepted |
+| [0006](decisions/0006-remove-the-legacy-react-stack.md)        | Remove the legacy React and Sass stack           | Accepted |
+| [0007](decisions/0007-co-locate-css-with-astro-owners.md)      | Co-locate CSS with its Astro owner               | Accepted |
+| [0008](decisions/0008-use-a-restrained-developer-aesthetic.md) | Use a restrained developer aesthetic             | Accepted |
 
 ## Recording a new decision
 
