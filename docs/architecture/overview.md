@@ -2,6 +2,23 @@
 
 Last verified: 2026-08-24
 
+## Original goals
+
+Use these goals as the default compass for future technical and product decisions:
+
+- Keep the portfolio small, fast, and easy to understand.
+- Prefer static HTML, plain CSS, and no browser JavaScript unless a feature clearly needs more.
+- Keep the homepage focused on a short personal introduction, writing, and a few useful links.
+- Make publishing a post as simple as adding reviewed Markdown to the repository.
+- Leave room for richer articles or experiments without turning the whole site into an application.
+- Avoid infrastructure, dependencies, abstractions, and duplicate pages that the site's current
+  needs do not justify.
+
+These goals are guardrails, not permanent prohibitions. When a proposed direction no longer aligns
+with them, state exactly how it differs and why the tradeoff may now be worthwhile, then ask the
+repository owner for confirmation before implementing it. If the deviation is approved, preserve the
+reasoning in a new decision record rather than allowing the architecture to drift silently.
+
 ## System at a glance
 
 This repository builds a personal portfolio and writing site as static HTML and CSS. Astro is the

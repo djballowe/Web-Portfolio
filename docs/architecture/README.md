@@ -26,6 +26,17 @@ Create the next numbered file in `decisions/` when a change affects system bound
 content flow, deployment, dependencies, security posture, or a convention future work should not
 casually reverse.
 
+Use the original goals in [`overview.md`](overview.md#original-goals) as the default test for new
+directions. If a proposal conflicts with one or more of those goals, do not treat that as an
+automatic rejection or silently proceed. Explain the deviation and ask the repository owner to
+confirm it before implementation. A useful form is:
+
+> We can take this path, but it deviates from the original plan by X, Y, and Z. Do you want to make
+> that tradeoff?
+
+Record an approved deviation as a new decision, including why the original constraint no longer
+serves the project.
+
 Use the same sections as the existing records:
 
 - **Status** and **Date**
