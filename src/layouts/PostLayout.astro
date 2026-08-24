@@ -24,16 +24,24 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 >
   <main id="main-content">
     <article class="article">
-      <a class="back-link" href="/#writing"><span aria-hidden="true">cd</span> ../writing</a>
       <header class="article-header">
-        <p class="command"><span aria-hidden="true">$</span> cat ./post.md</p>
         <h1>{title}</h1>
         <p class="article-description">{description}</p>
         <p class="article-date">
-          <time datetime={publishedAt.toISOString()}>{dateFormatter.format(publishedAt)}</time>
-          {updatedAt && (
-            <> · Updated <time datetime={updatedAt.toISOString()}>{dateFormatter.format(updatedAt)}</time></>
-          )}
+          <time datetime={publishedAt.toISOString()}
+            >{dateFormatter.format(publishedAt)}</time
+          >
+          {
+            updatedAt && (
+              <>
+                {" "}
+                · Updated{" "}
+                <time datetime={updatedAt.toISOString()}>
+                  {dateFormatter.format(updatedAt)}
+                </time>
+              </>
+            )
+          }
         </p>
       </header>
       <div class="article-body">
@@ -42,3 +50,113 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
     </article>
   </main>
 </BaseLayout>
+
+<style>
+  .article-description {
+    color: var(--muted);
+  }
+
+  .article {
+    padding-block: 1.75rem;
+  }
+
+  .article-header {
+    padding-bottom: 1.75rem;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .article-header h1 {
+    max-width: 24ch;
+    margin: 0 0 1rem 1.35rem;
+    color: var(--text);
+  }
+
+  .article-description,
+  .article-date {
+    max-width: 42rem;
+    margin-left: 1.35rem;
+  }
+
+  .article-description {
+    margin-bottom: 1rem;
+  }
+
+  .article-date {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .article-body {
+    max-width: 44rem;
+    padding: 1.75rem 0 0 1.35rem;
+    color: #bcc6be;
+    font-size: 0.96rem;
+  }
+
+  .article-body :global(p),
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin: 0 0 1.5rem;
+  }
+
+  .article-body > :global(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    padding-left: 1.4rem;
+  }
+
+  .article-body :global(li) {
+    padding-left: 0.35rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .article-body :global(h2),
+  .article-body :global(h3) {
+    margin: 2.75rem 0 1rem;
+    color: var(--accent);
+    line-height: 1.3;
+  }
+
+  .article-body :global(h2)::before {
+    margin-right: 0.6rem;
+    color: var(--muted);
+    content: "##";
+  }
+
+  .article-body :global(code) {
+    padding: 0.08rem 0.3rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--accent);
+    font-size: 0.9em;
+  }
+
+  .article-body :global(blockquote) {
+    margin-left: 0;
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--accent);
+    color: var(--muted);
+  }
+
+  @media (max-width: 40rem) {
+    .article {
+      padding-block: 1.5rem 1.75rem;
+    }
+
+    .article-header h1,
+    .article-description,
+    .article-date,
+    .article-body {
+      margin-left: 0.6rem;
+    }
+
+    .article-body {
+      padding-top: 1.5rem;
+      padding-left: 0;
+    }
+  }
+</style>

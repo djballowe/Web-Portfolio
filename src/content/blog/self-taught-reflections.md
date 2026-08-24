@@ -1,6 +1,6 @@
 ---
 title: "The Path That Got Me Hired Is Gone"
-description: "A look back at the self-taught path in 2022—and the reality today"
+description: "A look back at how my career started and the reality today"
 publishedAt: 2026-08-21
 draft: false
 tags:
@@ -8,11 +8,11 @@ tags:
   - career
 ---
 
-Given my background, I've been asked for advice on breaking into the industry many times. Today, I
-want to write down how my thinking about this problem has changed over the years.
+Given my unconventional background, I've been asked for advice on breaking into the industry many times. Today, I
+want to get into how my thinking about this problem has changed over the years.
 
 > **The short version:** The path I took in 2022 has all but disappeared. A degree and internships
-> are now the most reliable route; the self-taught path demands much deeper fundamentals and
+> are now the most reliable route. The self-taught path demands much deeper fundamentals and
 > relentless networking.
 
 ## How did I get here?
@@ -31,12 +31,12 @@ Seven months later, with a solid green GitHub history and just barely enough kno
 interview, I found myself with **two job offers**.
 
 Obviously, I'm glossing over a lot of intense work, 14-plus-hour days, and some of the most
-stressful times of my life as the weight of the corner I'd backed myself into crushed down on me.
+sleepless nights wrestling with if I had made the right decision or not.
 That's all easy to hand-wave now because it's over, and I have a great career doing something I
 really enjoy.
 
 As we all know, shortly afterward, two things happened that have thrown the tech world into disarray
-ever since: ChatGPT 3.5 was released, and interest rates were hiked to over 6 percent. I think those
+ever since: ChatGPT 3.5 was released, and interest rates were hiked to over 6 percent. Those
 two things effectively slammed the door shut on this strategy for breaking into the industry.
 
 ## Is this possible anymore?
@@ -55,14 +55,14 @@ degree. This isn't a perfect measurement, but it makes sense and feels like a si
 We've all seen the graphs and felt the general mood around this industry for the last four years:
 it's not pretty. Gone are the golden days of tossing a résumé into the air and getting three offers
 before it hits the ground. It's tough out there. Yet I still see ads for boot camps and courses
-claiming you can easily grab a six-figure role—trying to squeeze blood from a stone.
+claiming you can easily grab a six-figure role. Trying to squeeze blood from a stone.
 
 ## Should you even bother?
 
 At this point, giving advice on breaking into this industry feels a lot like a boomer telling a
 member of Gen Z to get a job by walking into the building and giving someone a firm handshake. It's
 just completely different now, and what worked then won't work today. However, I still think there
-is a path—but it's so much more brutal than the one I went down, and I don't want to sugarcoat it.
+is a path. It's just much more brutal than the one I went down.
 
 ## How I'd do it today
 
@@ -110,14 +110,15 @@ you complete step one and then shotgun résumés to every opening. They don't ca
 projects because they won't even look at them. They'll see no experience and no CS degree, then
 throw your résumé in the trash.
 
-You need to find communities and become known. Go to meetups and engage with people, even if it's
+You need to find communities and become someone that people **trust**. Go to meetups and engage with people, even if it's
 only online. Build a reputation as someone who is eager and dependable. You never know when someone
 you meet there will suddenly have an opening. Instead of reaching into the hellscape that is this
-job market, they'll think about the people they already know and trust to fill that role.
+job market, they'll think about the people they already know and trust to fill that role. You want to be that person.
 
 **Step 3: Repeat until you win.**
 
-You're in it for the long haul. It could take months; it could take years. But repeating those two
+You're in it for the long haul. It could take months. It could take years. But repeating those two
 steps and showing up every day, even if it's only for a small amount, will move the needle. The
 golden era of the self-taught path is over, but it's still possible. Just don't waste your time
-spinning your wheels on advice that is out of touch with the reality of the times.
+spinning your wheels on advice that is out of touch with the reality of the times and most importantly do not think
+that it will be easy because it wasn't then and definitely didn't get easier.

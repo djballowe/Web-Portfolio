@@ -44,18 +44,116 @@ const socialImageUrl = socialImage
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="site-header">
-        <a class="wordmark" href="/" aria-label="David Ballowe, home"><span>davidballowe</span>:<b aria-hidden="true">_</b></a>
+        <a class="wordmark" href="/" aria-label="David Ballowe, home"
+          ><span>david_ballowe</span></a
+        >
         <nav aria-label="Primary navigation">
-          <a href="/">/home</a>
-          <a href="/#writing">/writing</a>
+          <a href="/#writing">/about</a>
           <a href="mailto:db@davidballowe.com">/email</a>
         </nav>
       </header>
       <slot />
       <footer class="site-footer">
-        <p><span>davidballowe</span>:<b aria-hidden="true">_</b></p>
+        <p><span>david_ballowe</span></p>
         <p>© {new Date().getFullYear()} David Ballowe</p>
       </footer>
     </div>
   </body>
 </html>
+
+<style>
+  .skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    padding: 0.35rem 0.65rem;
+    background: var(--accent);
+    color: var(--background);
+    transform: translateY(-200%);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  .site-shell {
+    width: min(calc(100% - 2.5rem), var(--page-width));
+    margin-inline: auto;
+  }
+
+  .site-header,
+  .site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .site-header {
+    min-height: 5rem;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .wordmark {
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .wordmark span,
+  .site-footer span {
+    color: var(--accent);
+  }
+
+  .site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+  }
+
+  .site-header nav a {
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-decoration: none;
+  }
+
+  .site-header nav a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .site-footer {
+    padding-block: 1.5rem 2rem;
+    border-top: 1px dashed var(--line);
+    color: var(--muted);
+  }
+
+  .site-footer p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 40rem) {
+    .site-shell {
+      width: min(calc(100% - 2rem), var(--page-width));
+    }
+
+    .site-header {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.35rem;
+      min-height: 5.75rem;
+    }
+
+    .site-header nav {
+      gap: 0.3rem 1rem;
+    }
+
+    .site-footer {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+</style>
