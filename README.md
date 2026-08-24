@@ -23,6 +23,11 @@ pnpm build
 Posts live in `src/content/blog` as Markdown files. Frontmatter is validated by the schema in
 `src/content.config.ts`; posts marked `draft: true` are excluded from the site.
 
+## Architecture documentation
+
+Start with [`docs/architecture/README.md`](docs/architecture/README.md) for a map of the current
+architecture and the decision records that explain why it is organized this way.
+
 ## Dependency security
 
 - Direct dependencies use exact versions and the full tree is committed in `pnpm-lock.yaml`.
